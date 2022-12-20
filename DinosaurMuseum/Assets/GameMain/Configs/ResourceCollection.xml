@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<UnityGameFramework>
+  <ResourceCollection>
+    <Resources>
+      <Resource Name="Configs" FileSystem="GameData" LoadType="0" Packed="True" ResourceGroups="Base" />
+      <Resource Name="DataTables" LoadType="0" Packed="True" />
+      <Resource Name="Entities" LoadType="0" Packed="True" />
+      <Resource Name="Fonts" LoadType="0" Packed="True" />
+      <Resource Name="Localization/Dictionaries" Variant="en-us" FileSystem="UI" LoadType="0" Packed="True" ResourceGroups="Base" />
+      <Resource Name="Localization/Dictionaries" Variant="ko-kr" FileSystem="UI" LoadType="0" Packed="True" ResourceGroups="Base" />
+      <Resource Name="Localization/Dictionaries" Variant="zh-cn" FileSystem="UI" LoadType="0" Packed="True" ResourceGroups="Base" />
+      <Resource Name="Localization/Dictionaries" Variant="zh-tw" FileSystem="UI" LoadType="0" Packed="True" ResourceGroups="Base" />
+      <Resource Name="Meshes" LoadType="0" Packed="True" />
+      <Resource Name="Scenes" LoadType="0" Packed="True" />
+      <Resource Name="Scripts/Utility/DOTween/DOTween" LoadType="0" Packed="False" />
+      <Resource Name="Scripts/Utility/DOTween/Editor/DOTweenEditor" LoadType="0" Packed="False" />
+      <Resource Name="Scripts/Utility/DOTween/Editor/Imgs/DOTweenIcon" LoadType="0" Packed="False" />
+      <Resource Name="Scripts/Utility/DOTween/Editor/Imgs/DOTweenMiniIcon" LoadType="0" Packed="False" />
+      <Resource Name="Scripts/Utility/DOTween/Editor/Imgs/Footer" LoadType="0" Packed="False" />
+      <Resource Name="Scripts/Utility/DOTween/Editor/Imgs/Footer_dark" LoadType="0" Packed="False" />
+      <Resource Name="Scripts/Utility/DOTween/Editor/Imgs/Header" LoadType="0" Packed="False" />
+      <Resource Name="Scripts/Utility/DOTween/readme" LoadType="0" Packed="False" />
+      <Resource Name="Textures" LoadType="0" Packed="True" />
+      <Resource Name="UIForm" LoadType="0" Packed="True" />
+    </Resources>
+    <Assets>
+      <Asset Guid="0208a898b97fc3941b216146d0f9fa0b" ResourceName="DataTables" />
+      <Asset Guid="1053b0070685be347ab58587156842dc" ResourceName="Localization/Dictionaries" ResourceVariant="zh-tw" />
+      <Asset Guid="14869ac0d4433f04db1704e39d03412e" ResourceName="Localization/Dictionaries" ResourceVariant="en-us" />
+      <Asset Guid="15b4e184731dbfc4ebf4ba9b405c4f48" ResourceName="Scripts/Utility/DOTween/Editor/Imgs/DOTweenMiniIcon" />
+      <Asset Guid="175db1b3ba33bca428e554d25023e496" ResourceName="DataTables" />
+      <Asset Guid="20c3083696ec5e94998fa33de097b723" ResourceName="Entities" />
+      <Asset Guid="21be7dc17a90fc340a390c37147aedca" ResourceName="Textures" />
+      <Asset Guid="2b1457b0c56750c4bb7c5199642e12bd" ResourceName="Scripts/Utility/DOTween/Editor/Imgs/DOTweenIcon" />
+      <Asset Guid="343e7f288e3393049a636417d585d28f" ResourceName="Fonts" />
+      <Asset Guid="356905187c48fa24297204a40642f9ae" ResourceName="Textures" />
+      <Asset Guid="3c74bd53581e2a64880bce62985efde6" ResourceName="Meshes" />
+      <Asset Guid="44c8db52241385c45bbb14a1718f17bf" ResourceName="Configs" />
+      <Asset Guid="49fe27ecb19c7824181c5e4210908e1d" ResourceName="UIForm" />
+      <Asset Guid="5dcd89912e222bf4c87f76db4044bc5e" ResourceName="Localization/Dictionaries" ResourceVariant="ko-kr" />
+      <Asset Guid="5e0e08e4ac11963449de59a6b19cd72f" ResourceName="Textures" />
+      <Asset Guid="68e3fd325489af74caf5731cdc4aab1c" ResourceName="Textures" />
+      <Asset Guid="68f616f2d08b4ea4990a566d22fb1814" ResourceName="UIForm" />
+      <Asset Guid="6b1e71d96cb1e1d4d96e44612654254f" ResourceName="Scripts/Utility/DOTween/Editor/Imgs/Footer_dark" />
+      <Asset Guid="6e4bb9fa98e35dd41877468183d99507" ResourceName="DataTables" />
+      <Asset Guid="8697eb8969056a847811df2dcaf6f0bc" ResourceName="DataTables" />
+      <Asset Guid="89b446b2b8ba3184284e6bcc7ebd6d50" ResourceName="Scripts/Utility/DOTween/readme" />
+      <Asset Guid="89b780f00aa453a42aa522fc591ad1fc" ResourceName="Entities" />
+      <Asset Guid="8be7c31bc88555d43874f81d938f9c98" ResourceName="Meshes" />
+      <Asset Guid="8c58ba9b22243264fa874f241fb2726e" ResourceName="Meshes" />
+      <Asset Guid="93d4e2d62735dc04388313e11e1a49da" ResourceName="Scripts/Utility/DOTween/Editor/DOTweenEditor" />
+      <Asset Guid="9b9ca7b6243f6c041bf53127ddbeac41" ResourceName="DataTables" />
+      <Asset Guid="9be2e1e45f4edd74c8764538ad306b78" ResourceName="Localization/Dictionaries" ResourceVariant="zh-cn" />
+      <Asset Guid="9ee39a617f11eec4ab1b8902cc9efe90" ResourceName="DataTables" />
+      <Asset Guid="bd589614e0253e6489700fb9b2cb82b3" ResourceName="Scenes" />
+      <Asset Guid="c43e0c565578d0a44b4968fab48a7403" ResourceName="Entities" />
+      <Asset Guid="c5633c5dd1eaddf4ab5995534d042779" ResourceName="Scenes" />
+      <Asset Guid="dd3fdfb54e62ed84cb33d99664ec4577" ResourceName="Scripts/Utility/DOTween/DOTween" />
+      <Asset Guid="e86006a37b811044ea31428f8f2e373d" ResourceName="Scripts/Utility/DOTween/Editor/Imgs/Footer" />
+      <Asset Guid="f89b57f91d75dd243baefc5a81b01bff" ResourceName="Textures" />
+      <Asset Guid="f956d2185ef40e840a15b7733d3f354d" ResourceName="Scripts/Utility/DOTween/Editor/Imgs/Header" />
+    </Assets>
+  </ResourceCollection>
+</UnityGameFramework>

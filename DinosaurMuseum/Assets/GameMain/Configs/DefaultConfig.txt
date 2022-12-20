@@ -1,0 +1,5 @@
+#	默认配置		
+#	配置项	策划备注	配置值
+	Game.Id		EasyARProject
+	Scene.ImageTracking_Targets		1
+	Scene.StartMenu		2

@@ -1,0 +1,16 @@
+#|Id|AssetName|
+#|int|string|
+|10000|PlayerShip
+|10001|EnemyShip
+|20000|PlayerEngine
+|20001|EnemyEngine
+|30000|DefaultWeapon
+|40000|DefaultArmor
+|50000|PlayerBolt
+|50001|EnemyBolt
+|60000|Asteroid01
+|60001|Asteroid02
+|60002|Asteroid03
+|70000|PlayerExplosion
+|70001|EnemyExplosion
+|70002|AsteroidExplosion

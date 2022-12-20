@@ -1,0 +1,11 @@
+总文件数=7
+输入路径=excel\
+输出路径=excel_output\csv\
+进度:1/7/DefaultConfig.xls
+进度:2/7/Entity.xls
+进度:3/7/Music.xls
+进度:4/7/Scene.xls
+进度:5/7/Sound.xls
+进度:6/7/UIForm.xls
+进度:7/7/UISound.xls
+处理完成,成功导出的数量:7,失败的数量:0

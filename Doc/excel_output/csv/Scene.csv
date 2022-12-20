@@ -1,0 +1,4 @@
+#|Id|AssetName|BackgroundMusicId|
+#|int|string|int|
+|1|ImageTracking_Targets|1
+|2|StartMenu|1

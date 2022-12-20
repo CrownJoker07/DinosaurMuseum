@@ -1,0 +1,5 @@
+#|Id|AssetName|UIGroupName|AllowMultiInstance|PauseCoveredUIForm|
+#|int|string|string|bool|bool|
+|1|DialogForm|Default|TRUE|TRUE
+|100|UIMainForm|Default|FALSE|TRUE
+|101|StartMenuForm|Default|FALSE|TRUE

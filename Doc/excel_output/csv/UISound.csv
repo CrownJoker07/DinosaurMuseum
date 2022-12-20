@@ -1,0 +1,4 @@
+#|Id|AssetName|Priority|Volume|
+#|int|string|int|float|
+|10000|select|0|1
+|10001|click|0|1

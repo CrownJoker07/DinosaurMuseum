@@ -8,7 +8,7 @@
 using System;
 using UnityEngine;
 
-namespace EasyARProject
+namespace VGame
 {
     [Serializable]
     public abstract class TargetableObjectData : EntityData

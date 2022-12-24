@@ -9,7 +9,7 @@ using GameFramework.Event;
 using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 
-namespace EasyARProject
+namespace VGame
 {
 	public class ProcedureMenu : ProcedureBase
 	{
@@ -58,7 +58,7 @@ namespace EasyARProject
 
 			if (m_StartGame)
 			{
-				procedureOwner.SetData<VarInt32>("NextSceneId", GameEntry.Config.GetInt("Scene.ImageTracking_Targets"));
+				procedureOwner.SetData<VarInt32>("NextSceneId", GameEntry.Config.GetInt("Scene.VGame"));
 				procedureOwner.SetData<VarByte>("GameMode", (byte)GameMode.Survival);
 				ChangeState<ProcedureChangeScene>(procedureOwner);
 			}

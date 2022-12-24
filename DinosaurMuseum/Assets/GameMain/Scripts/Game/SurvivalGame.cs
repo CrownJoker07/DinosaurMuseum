@@ -9,7 +9,7 @@ using GameFramework;
 using GameFramework.DataTable;
 using UnityEngine;
 
-namespace EasyARProject
+namespace VGame
 {
 	public class SurvivalGame : GameBase
 	{

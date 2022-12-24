@@ -7,7 +7,7 @@
 
 using GameFramework;
 
-namespace EasyARProject
+namespace VGame
 {
 	public static class AssetUtility
 	{

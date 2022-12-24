@@ -11,7 +11,7 @@ using UnityEngine;
 using UnityGameFramework.Editor;
 using UnityGameFramework.Editor.ResourceTools;
 
-namespace EasyARProject.Editor
+namespace VGame.Editor
 {
 	public static class GameFrameworkConfigs
 	{

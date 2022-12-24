@@ -1,4 +1,4 @@
-﻿//------------------------------------------------------------
+//------------------------------------------------------------
 // Game Framework
 // Copyright © 2013-2021 Jiang Yin. All rights reserved.
 // Homepage: https://gameframework.cn/
@@ -10,11 +10,11 @@ using System;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
-namespace EasyARProject
+namespace VGame
 {
 	public static class DataTableExtension
 	{
-		private const string DataRowClassPrefixName = "EasyARProject.DR";
+		private const string DataRowClassPrefixName = "VGame.DR";
 		internal static readonly char[] DataSplitSeparators = new char[] { '\t' };
 		internal static readonly char[] DataTrimSeparators = new char[] { '\"' };
 

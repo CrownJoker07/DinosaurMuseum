@@ -6,7 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace EasyARProject
+namespace VGame
 {
 	public class UIMainForm : UGuiForm
 	{

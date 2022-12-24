@@ -8,7 +8,7 @@
 using ProtoBuf;
 using System;
 
-namespace EasyARProject
+namespace VGame
 {
     [Serializable, ProtoContract(Name = @"SCHeartBeat")]
     public class SCHeartBeat : SCPacketBase

@@ -12,7 +12,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityGameFramework.Runtime;
 
-namespace EasyARProject
+namespace VGame
 {
     public static class UIExtension
     {

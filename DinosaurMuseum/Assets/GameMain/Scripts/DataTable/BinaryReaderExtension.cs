@@ -9,7 +9,7 @@ using System;
 using System.IO;
 using UnityEngine;
 
-namespace EasyARProject
+namespace VGame
 {
     public static class BinaryReaderExtension
     {

@@ -8,7 +8,7 @@
 using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 
-namespace EasyARProject
+namespace VGame
 {
 	public class ProcedureInitResources : ProcedureBase
 	{

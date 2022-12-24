@@ -10,7 +10,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityGameFramework.Runtime;
 
-namespace EasyARProject
+namespace VGame
 {
     public class DialogForm : UGuiForm
     {

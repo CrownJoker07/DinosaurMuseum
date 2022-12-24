@@ -10,7 +10,7 @@ using GameFramework.Localization;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
-namespace EasyARProject
+namespace VGame
 {
     public class ChangeLanguageDebuggerWindow : IDebuggerWindow
     {

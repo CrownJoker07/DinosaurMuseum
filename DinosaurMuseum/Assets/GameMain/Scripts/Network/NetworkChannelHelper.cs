@@ -16,7 +16,7 @@ using System.IO;
 using System.Reflection;
 using UnityGameFramework.Runtime;
 
-namespace EasyARProject
+namespace VGame
 {
     public class NetworkChannelHelper : INetworkChannelHelper
     {

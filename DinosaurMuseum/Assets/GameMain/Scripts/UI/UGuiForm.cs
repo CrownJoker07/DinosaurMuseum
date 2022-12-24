@@ -11,7 +11,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityGameFramework.Runtime;
 
-namespace EasyARProject
+namespace VGame
 {
     public abstract class UGuiForm : UIFormLogic
     {

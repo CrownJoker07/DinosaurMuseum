@@ -7,7 +7,7 @@
 
 using System;
 
-namespace EasyARProject
+namespace VGame
 {
     public static class WebUtility
     {

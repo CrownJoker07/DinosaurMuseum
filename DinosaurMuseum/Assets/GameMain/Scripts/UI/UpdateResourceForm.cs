@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace EasyARProject
+namespace VGame
 {
     public class UpdateResourceForm : MonoBehaviour
     {

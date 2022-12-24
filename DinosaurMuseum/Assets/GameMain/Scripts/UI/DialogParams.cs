@@ -7,7 +7,7 @@
 
 using GameFramework;
 
-namespace EasyARProject
+namespace VGame
 {
     /// <summary>
     /// 对话框显示数据。

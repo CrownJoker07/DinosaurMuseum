@@ -8,7 +8,7 @@
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
-namespace EasyARProject
+namespace VGame
 {
 	/// <summary>
 	/// 游戏入口。

@@ -10,7 +10,7 @@ using System;
 using System.Xml;
 using UnityGameFramework.Runtime;
 
-namespace EasyARProject
+namespace VGame
 {
 	/// <summary>
 	/// XML 格式的本地化辅助器。

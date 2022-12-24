@@ -8,7 +8,7 @@
 using GameFramework.Network;
 using UnityGameFramework.Runtime;
 
-namespace EasyARProject
+namespace VGame
 {
     public class SCHeartBeatHandler : PacketHandlerBase
     {

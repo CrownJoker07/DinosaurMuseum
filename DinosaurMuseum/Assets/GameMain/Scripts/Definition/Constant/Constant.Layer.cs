@@ -7,7 +7,7 @@
 
 using UnityEngine;
 
-namespace EasyARProject
+namespace VGame
 {
     public static partial class Constant
     {

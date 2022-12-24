@@ -5,7 +5,7 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-namespace EasyARProject.Editor.DataTableTools
+namespace VGame.Editor.DataTableTools
 {
     public sealed partial class DataTableProcessor
     {

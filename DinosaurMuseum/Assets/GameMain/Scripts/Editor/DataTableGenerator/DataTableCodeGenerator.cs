@@ -7,7 +7,7 @@
 
 using System.Text;
 
-namespace EasyARProject.Editor.DataTableTools
+namespace VGame.Editor.DataTableTools
 {
     public delegate void DataTableCodeGenerator(DataTableProcessor dataTableProcessor, StringBuilder codeContent, object userData);
 }

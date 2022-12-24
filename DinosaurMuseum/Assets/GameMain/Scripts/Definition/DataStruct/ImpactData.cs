@@ -7,7 +7,7 @@
 
 using System.Runtime.InteropServices;
 
-namespace EasyARProject
+namespace VGame
 {
     [StructLayout(LayoutKind.Auto)]
     public struct ImpactData

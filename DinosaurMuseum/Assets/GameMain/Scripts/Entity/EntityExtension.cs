@@ -9,7 +9,7 @@ using GameFramework.DataTable;
 using System;
 using UnityGameFramework.Runtime;
 
-namespace EasyARProject
+namespace VGame
 {
 	public static class EntityExtension
 	{

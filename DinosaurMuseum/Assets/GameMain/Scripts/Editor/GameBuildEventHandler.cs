@@ -11,7 +11,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityGameFramework.Editor.ResourceTools;
 
-namespace EasyARProject.Editor
+namespace VGame.Editor
 {
 	public sealed class GameBuildEventHandler : IBuildEventHandler
 	{

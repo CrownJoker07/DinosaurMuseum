@@ -8,7 +8,7 @@
 using GameFramework;
 using GameFramework.Network;
 
-namespace EasyARProject
+namespace VGame
 {
     public abstract class PacketHeaderBase : IPacketHeader, IReference
     {

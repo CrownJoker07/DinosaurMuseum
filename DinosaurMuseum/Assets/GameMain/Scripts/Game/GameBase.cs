@@ -9,7 +9,7 @@ using GameFramework.Event;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
-namespace EasyARProject
+namespace VGame
 {
 	public abstract class GameBase
 	{

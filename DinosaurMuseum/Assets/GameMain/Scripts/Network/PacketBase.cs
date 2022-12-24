@@ -8,7 +8,7 @@
 using GameFramework.Network;
 using ProtoBuf;
 
-namespace EasyARProject
+namespace VGame
 {
     public abstract class PacketBase : Packet, IExtensible
     {

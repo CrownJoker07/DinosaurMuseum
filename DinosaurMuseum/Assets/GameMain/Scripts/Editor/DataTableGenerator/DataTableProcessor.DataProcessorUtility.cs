@@ -10,7 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace EasyARProject.Editor.DataTableTools
+namespace VGame.Editor.DataTableTools
 {
     public sealed partial class DataTableProcessor
     {

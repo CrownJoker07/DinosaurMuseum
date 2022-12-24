@@ -7,7 +7,7 @@
 
 using UnityEngine;
 
-namespace EasyARProject
+namespace VGame
 {
 	/// <summary>
 	/// 游戏入口。

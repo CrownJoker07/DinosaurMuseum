@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace EasyARProject.Editor.DataTableTools
+namespace VGame.Editor.DataTableTools
 {
 	public sealed class DataTableGeneratorMenu
 	{

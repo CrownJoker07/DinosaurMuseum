@@ -5,7 +5,7 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 // 此文件由工具自动生成，请勿直接修改。
-// 生成时间：2022-12-16 19:59:33.065
+// 生成时间：2022-12-24 14:13:50.934
 //------------------------------------------------------------
 
 using GameFramework;
@@ -16,7 +16,7 @@ using System.Text;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
-namespace EasyARProject
+namespace VGame
 {
     /// <summary>
     /// Entity。

@@ -5,7 +5,7 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
-namespace EasyARProject
+namespace VGame
 {
     public enum PacketType : byte
     {

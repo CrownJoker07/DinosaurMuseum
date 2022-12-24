@@ -7,7 +7,7 @@
 
 using GameFramework.Network;
 
-namespace EasyARProject
+namespace VGame
 {
     public abstract class PacketHandlerBase : IPacketHandler
     {

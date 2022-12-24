@@ -1,4 +1,4 @@
-﻿//------------------------------------------------------------
+//------------------------------------------------------------
 // Game Framework
 // Copyright © 2013-2021 Jiang Yin. All rights reserved.
 // Homepage: https://gameframework.cn/
@@ -13,7 +13,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using UnityEngine;
 
-namespace EasyARProject.Editor.DataTableTools
+namespace VGame.Editor.DataTableTools
 {
 	public sealed class DataTableGenerator
 	{
@@ -77,7 +77,7 @@ namespace EasyARProject.Editor.DataTableTools
 			string dataTableName = (string)userData;
 
 			codeContent.Replace("__DATA_TABLE_CREATE_TIME__", DateTime.UtcNow.ToLocalTime().ToString("yyyy-MM-dd HH:mm:ss.fff"));
-			codeContent.Replace("__DATA_TABLE_NAME_SPACE__", "EasyARProject");
+			codeContent.Replace("__DATA_TABLE_NAME_SPACE__", "VGame");
 			codeContent.Replace("__DATA_TABLE_CLASS_NAME__", "DR" + dataTableName);
 			codeContent.Replace("__DATA_TABLE_COMMENT__", dataTableName + "。");
 			codeContent.Replace("__DATA_TABLE_ID_COMMENT__", "获取" + dataTableProcessor.GetComment(dataTableProcessor.IdColumn) + "。");

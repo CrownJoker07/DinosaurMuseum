@@ -1,9 +1,9 @@
 /Doc/err-ExcelToCsv.log
-/DinosaurMuseum/.vs
-/DinosaurMuseum/Library
-/DinosaurMuseum/Logs
-/DinosaurMuseum/obj
-/DinosaurMuseum/Assembly-CSharp.csproj
-/DinosaurMuseum/Assembly-CSharp-Editor.csproj
-/DinosaurMuseum/UnityGameFramework.Editor.csproj
-/DinosaurMuseum/UnityGameFramework.Runtime.csproj
+/DinosaurMuseum_URP/.vs
+/DinosaurMuseum_URP/Library
+/DinosaurMuseum_URP/Logs
+/DinosaurMuseum_URP/obj
+/DinosaurMuseum_URP/Assembly-CSharp.csproj
+/DinosaurMuseum_URP/Assembly-CSharp-Editor.csproj
+/DinosaurMuseum_URP/UnityGameFramework.Editor.csproj
+/DinosaurMuseum_URP/UnityGameFramework.Runtime.csproj

@@ -6,7 +6,6 @@
 //------------------------------------------------------------
 
 using UnityEngine;
-using Mirror;
 
 namespace VGame
 {
@@ -15,12 +14,6 @@ namespace VGame
 	/// </summary>
 	public partial class GameEntry : MonoBehaviour
 	{
-		public static NetworkManager networkManager
-		{
-			get;
-			private set;
-		}
-
 		public static BuiltinDataComponent BuiltinData
 		{
 			get;
@@ -30,11 +23,6 @@ namespace VGame
 		private static void InitCustomComponents()
 		{
 			BuiltinData = UnityGameFramework.Runtime.GameEntry.GetComponent<BuiltinDataComponent>();
-		}
-
-		public static void SetnetworkManager(NetworkManager _NetworkManager)
-		{
-			networkManager = _NetworkManager;
 		}
 	}
 }

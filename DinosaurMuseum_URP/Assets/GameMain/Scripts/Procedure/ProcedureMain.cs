@@ -14,9 +14,7 @@ namespace VGame
 {
 	public class ProcedureMain : ProcedureBase
 	{
-		private const float GameOverDelayedSeconds = 2f;
-
-		private readonly Dictionary<GameMode, GameBase> m_Games = new Dictionary<GameMode, GameBase>();
+		public static GameMode m_GameMode;
 		private GameBase m_CurrentGame = null;
 		private bool m_LeaveGame = false;
 		private UIMainForm m_UIMainForm = null;
@@ -37,15 +35,11 @@ namespace VGame
 		protected override void OnInit(ProcedureOwner procedureOwner)
 		{
 			base.OnInit(procedureOwner);
-
-			m_Games.Add(GameMode.Survival, new SurvivalGame());
 		}
 
 		protected override void OnDestroy(ProcedureOwner procedureOwner)
 		{
 			base.OnDestroy(procedureOwner);
-
-			m_Games.Clear();
 		}
 
 		protected override void OnEnter(ProcedureOwner procedureOwner)
@@ -53,12 +47,14 @@ namespace VGame
 			base.OnEnter(procedureOwner);
 
 			m_LeaveGame = false;
-			GameMode gameMode = (GameMode)procedureOwner.GetData<VarByte>("GameMode").Value;
-			m_CurrentGame = m_Games[gameMode];
-			m_CurrentGame.Initialize();
+			m_GameMode = (GameMode)procedureOwner.GetData<VarByte>("GameMode").Value;
+			if (m_CurrentGame != null)
+				m_CurrentGame.Initialize();
 
 			GameEntry.Event.Subscribe(OpenUIFormSuccessEventArgs.EventId, OnOpenUIFormSuccess);
 			GameEntry.UI.OpenUIForm(UIFormId.UIMainForm, this);
+
+			VGameManager.Instance.StartNetwork();
 		}
 
 		protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)

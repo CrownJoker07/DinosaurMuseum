@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace StarterAssets
+namespace VGame
 {
     public class UICanvasControllerInput : MonoBehaviour
     {

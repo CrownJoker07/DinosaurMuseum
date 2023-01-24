@@ -1,4 +1,5 @@
 using UnityEngine;
+using Mirror;
 
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 
@@ -6,9 +7,9 @@ using UnityEngine.InputSystem;
 
 #endif
 
-namespace StarterAssets
+namespace VGame
 {
-	public class StarterAssetsInputs : MonoBehaviour
+	public class StarterAssetsInputs : NetworkBehaviour
 	{
 		[Header("Character Input Values")]
 		public Vector2 move;

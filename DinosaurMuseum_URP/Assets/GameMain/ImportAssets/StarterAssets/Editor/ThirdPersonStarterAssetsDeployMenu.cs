@@ -4,7 +4,7 @@ using System.Text;
 using UnityEditor;
 using UnityEngine;
 
-namespace StarterAssets
+namespace VGame
 {
     public partial class StarterAssetsDeployMenu : ScriptableObject
     {

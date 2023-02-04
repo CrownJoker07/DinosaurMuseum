@@ -154,6 +154,11 @@ namespace VGame
 			_input = GetComponent<StarterAssetsInputs>();
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 			_playerInput = GetComponent<PlayerInput>();
+			_playerInput.enabled = false;
+			if (isLocalPlayer)
+			{
+				_playerInput.enabled = true;
+			}
 #else
 			Debug.LogError( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
 #endif
@@ -178,6 +183,7 @@ namespace VGame
 
 		private void LateUpdate()
 		{
+			//if (isLocalPlayer)
 			CameraRotation();
 		}
 

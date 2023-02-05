@@ -50,6 +50,7 @@ namespace VGame
 		[Tooltip("Time required to pass before entering the fall state. Useful for walking down stairs")]
 		public float FallTimeout = 0.15f;
 
+		[SyncVar]
 		[Header("Player Grounded")]
 		[Tooltip("If the character is grounded or not. Not part of the CharacterController built in grounded check")]
 		public bool Grounded = true;
@@ -86,7 +87,7 @@ namespace VGame
 
 		// player
 		private float _speed;
-
+		[SyncVar]
 		private float _animationBlend;
 		private float _targetRotation = 0.0f;
 		private float _rotationVelocity;
@@ -100,11 +101,16 @@ namespace VGame
 
 		// animation IDs
 		private int _animIDSpeed;
-
 		private int _animIDGrounded;
 		private int _animIDJump;
+		[SyncVar]
+		private bool m_isJump;
 		private int _animIDFreeFall;
+		[SyncVar]
+		private bool m_isFreeFall;
 		private int _animIDMotionSpeed;
+		[SyncVar]
+		private float m_inputMagnitude;
 
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 		private PlayerInput _playerInput;
@@ -176,9 +182,21 @@ namespace VGame
 		{
 			_hasAnimator = TryGetComponent(out _animator);
 
-			JumpAndGravity();
-			GroundedCheck();
-			Move();
+			if (isLocalPlayer)
+			{
+				JumpAndGravity();
+				GroundedCheck();
+				Move();
+			}
+
+			if (_hasAnimator)
+			{
+				_animator.SetFloat(_animIDSpeed, _animationBlend);
+				_animator.SetFloat(_animIDMotionSpeed, m_inputMagnitude);
+				_animator.SetBool(_animIDJump, m_isJump);
+				_animator.SetBool(_animIDGrounded, Grounded);
+				_animator.SetBool(_animIDFreeFall, m_isFreeFall);
+			}
 		}
 
 		private void LateUpdate()
@@ -205,10 +223,10 @@ namespace VGame
 				QueryTriggerInteraction.Ignore);
 
 			// update animator if using character
-			if (_hasAnimator)
-			{
-				_animator.SetBool(_animIDGrounded, Grounded);
-			}
+			//if (_hasAnimator)
+			//{
+			//	_animator.SetBool(_animIDGrounded, Grounded);
+			//}
 		}
 
 		private void CameraRotation()
@@ -249,6 +267,7 @@ namespace VGame
 
 			float speedOffset = 0.1f;
 			float inputMagnitude = _input.analogMovement ? _input.move.magnitude : 1f;
+			Set_m_inputMagnitude(inputMagnitude);
 
 			// accelerate or decelerate to target speed
 			if (currentHorizontalSpeed < targetSpeed - speedOffset ||
@@ -270,6 +289,8 @@ namespace VGame
 			_animationBlend = Mathf.Lerp(_animationBlend, targetSpeed, Time.deltaTime * SpeedChangeRate);
 			if (_animationBlend < 0.01f)
 				_animationBlend = 0f;
+
+			Set_animationBlend(_animationBlend);
 
 			// normalise input direction
 			Vector3 inputDirection = new Vector3(_input.move.x, 0.0f, _input.move.y).normalized;
@@ -294,11 +315,11 @@ namespace VGame
 							 new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
 
 			// update animator if using character
-			if (_hasAnimator)
-			{
-				_animator.SetFloat(_animIDSpeed, _animationBlend);
-				_animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
-			}
+			//if (_hasAnimator)
+			//{
+			//	_animator.SetFloat(_animIDSpeed, _animationBlend);
+			//	_animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
+			//}
 		}
 
 		private void JumpAndGravity()
@@ -309,11 +330,13 @@ namespace VGame
 				_fallTimeoutDelta = FallTimeout;
 
 				// update animator if using character
-				if (_hasAnimator)
-				{
-					_animator.SetBool(_animIDJump, false);
-					_animator.SetBool(_animIDFreeFall, false);
-				}
+				//if (_hasAnimator)
+				//{
+				//	_animator.SetBool(_animIDJump, false);
+				//	_animator.SetBool(_animIDFreeFall, false);
+				//}
+				Set_m_isJump(false);
+				Set_m_isFreeFall(false);
 
 				// stop our velocity dropping infinitely when grounded
 				if (_verticalVelocity < 0.0f)
@@ -328,10 +351,11 @@ namespace VGame
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
 
 					// update animator if using character
-					if (_hasAnimator)
-					{
-						_animator.SetBool(_animIDJump, true);
-					}
+					//if (_hasAnimator)
+					//{
+					//	_animator.SetBool(_animIDJump, true);
+					//}
+					Set_m_isJump(true);
 				}
 
 				// jump timeout
@@ -353,10 +377,11 @@ namespace VGame
 				else
 				{
 					// update animator if using character
-					if (_hasAnimator)
-					{
-						_animator.SetBool(_animIDFreeFall, true);
-					}
+					//if (_hasAnimator)
+					//{
+					//	_animator.SetBool(_animIDFreeFall, true);
+					//}
+					Set_m_isFreeFall(true);
 				}
 
 				// if we are not grounded, do not jump
@@ -413,6 +438,36 @@ namespace VGame
 			{
 				AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
 			}
+		}
+
+		[Command]
+		public void Set_animationBlend(float value)
+		{
+			_animationBlend = value;
+		}
+
+		[Command]
+		public void Set_m_inputMagnitude(float value)
+		{
+			m_inputMagnitude = value;
+		}
+
+		[Command]
+		public void Set_m_isJump(bool value)
+		{
+			m_isJump = value;
+		}
+
+		[Command]
+		public void Set_Grounded(bool value)
+		{
+			Grounded = value;
+		}
+
+		[Command]
+		public void Set_m_isFreeFall(bool value)
+		{
+			m_isFreeFall = value;
 		}
 	}
 }

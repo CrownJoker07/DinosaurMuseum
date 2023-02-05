@@ -6,6 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityGameFramework.Runtime;
+using Mirror;
 
 namespace VGame
 {
@@ -30,6 +31,14 @@ namespace VGame
 		public void OnClick_StartGame()
 		{
 			m_ProcedureMenu.StartGame();
+		}
+
+		/// <summary>
+		/// 加入游戏
+		/// </summary>
+		public void OnClick_JoinGame()
+		{
+			m_ProcedureMenu.JoinGame();
 		}
 
 		/// <summary>

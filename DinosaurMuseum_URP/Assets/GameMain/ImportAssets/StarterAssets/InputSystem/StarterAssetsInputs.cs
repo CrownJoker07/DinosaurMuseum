@@ -1,4 +1,5 @@
-using UnityEngine;
+﻿using UnityEngine;
+using Mirror;
 
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 
@@ -6,9 +7,9 @@ using UnityEngine.InputSystem;
 
 #endif
 
-namespace StarterAssets
+namespace VGame
 {
-	public class StarterAssetsInputs : MonoBehaviour
+	public class StarterAssetsInputs : NetworkBehaviour
 	{
 		[Header("Character Input Values")]
 		public Vector2 move;
@@ -54,21 +55,33 @@ namespace StarterAssets
 
 		public void MoveInput(Vector2 newMoveDirection)
 		{
+			if (!isLocalPlayer)
+				return;
+
 			move = newMoveDirection;
 		}
 
 		public void LookInput(Vector2 newLookDirection)
 		{
+			if (!isLocalPlayer)
+				return;
+
 			look = newLookDirection;
 		}
 
 		public void JumpInput(bool newJumpState)
 		{
+			if (!isLocalPlayer)
+				return;
+
 			jump = newJumpState;
 		}
 
 		public void SprintInput(bool newSprintState)
 		{
+			if (!isLocalPlayer)
+				return;
+
 			sprint = newSprintState;
 		}
 
@@ -79,6 +92,9 @@ namespace StarterAssets
 
 		private void SetCursorState(bool newState)
 		{
+			if (!isLocalPlayer)
+				return;
+
 			Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
 		}
 	}

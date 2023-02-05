@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+using UnityEngine;
+using Mirror;
 
-public class BasicRigidBodyPush : MonoBehaviour
+public class BasicRigidBodyPush : NetworkBehaviour
 {
 	public LayerMask pushLayers;
 	public bool canPush;
@@ -8,7 +9,8 @@ public class BasicRigidBodyPush : MonoBehaviour
 
 	private void OnControllerColliderHit(ControllerColliderHit hit)
 	{
-		if (canPush) PushRigidBodies(hit);
+		if (canPush)
+			PushRigidBodies(hit);
 	}
 
 	private void PushRigidBodies(ControllerColliderHit hit)
@@ -17,14 +19,17 @@ public class BasicRigidBodyPush : MonoBehaviour
 
 		// make sure we hit a non kinematic rigidbody
 		Rigidbody body = hit.collider.attachedRigidbody;
-		if (body == null || body.isKinematic) return;
+		if (body == null || body.isKinematic)
+			return;
 
 		// make sure we only push desired layer(s)
 		var bodyLayerMask = 1 << body.gameObject.layer;
-		if ((bodyLayerMask & pushLayers.value) == 0) return;
+		if ((bodyLayerMask & pushLayers.value) == 0)
+			return;
 
 		// We dont want to push objects below us
-		if (hit.moveDirection.y < -0.3f) return;
+		if (hit.moveDirection.y < -0.3f)
+			return;
 
 		// Calculate push direction from move direction, horizontal motion only
 		Vector3 pushDir = new Vector3(hit.moveDirection.x, 0.0f, hit.moveDirection.z);

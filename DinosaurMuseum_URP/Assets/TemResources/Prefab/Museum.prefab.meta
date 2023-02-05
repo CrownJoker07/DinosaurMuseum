@@ -1,6 +1,12 @@
 fileFormatVersion: 2
-guid: dcce77cdc25e0a643ad5af8dc27830b8
+<<<<<<<< HEAD:DinosaurMuseum_URP/Assets/TemResources/Museum.prefab.meta
+guid: 32bc1cc54d2fad141846bb0262f6fe64
 PrefabImporter:
+========
+guid: c4865b6327e3d7f41839c63962cd0129
+folderAsset: yes
+DefaultImporter:
+>>>>>>>> 395780f88a8c95fd36ea3c87d23d40aa0014e437:DinosaurMuseum_URP/Assets/TemResources/Prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

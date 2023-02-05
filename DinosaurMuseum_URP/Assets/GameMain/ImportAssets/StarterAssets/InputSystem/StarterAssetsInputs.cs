@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using Mirror;
 
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
@@ -25,6 +25,11 @@ namespace VGame
 		public bool cursorLocked = true;
 
 		public bool cursorInputForLook = true;
+
+		private void Start()
+		{
+			SetCursorState(true);
+		}
 
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 
@@ -87,7 +92,11 @@ namespace VGame
 
 		private void OnApplicationFocus(bool hasFocus)
 		{
+#if UNITY_EDITOR
+			SetCursorState(hasFocus);
+#else
 			SetCursorState(cursorLocked);
+#endif
 		}
 
 		private void SetCursorState(bool newState)

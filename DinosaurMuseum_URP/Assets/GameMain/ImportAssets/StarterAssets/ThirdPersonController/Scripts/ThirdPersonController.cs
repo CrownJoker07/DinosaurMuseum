@@ -183,8 +183,8 @@ namespace VGame
 
 		private void LateUpdate()
 		{
-			//if (isLocalPlayer)
-			CameraRotation();
+			if (Cursor.lockState == CursorLockMode.Locked)
+				CameraRotation();
 		}
 
 		private void AssignAnimationIDs()

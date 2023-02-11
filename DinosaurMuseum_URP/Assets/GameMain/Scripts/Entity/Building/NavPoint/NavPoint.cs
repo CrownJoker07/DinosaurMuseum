@@ -6,10 +6,13 @@ namespace VGame
 {
 	public class NavPoint : MonoBehaviour
 	{
-		[SerializeField] private BuildingArea m_BuildingArea;
+		private BuildingArea m_BuildingArea;
+		private Area m_Area;
 
 		private void Awake()
 		{
+			m_Area = GetComponentInParent<Area>();
+			m_BuildingArea = m_Area.m_BuildingArea;
 			VGameManager.Instance.AddNavPoint(m_BuildingArea, this.transform);
 		}
 	}

@@ -6,7 +6,7 @@ using Mirror;
 
 namespace VGame
 {
-	public class VGameManager : MonoBehaviour
+	public partial class VGameManager : MonoBehaviour
 	{
 		[HideInInspector] public static VGameManager Instance;
 

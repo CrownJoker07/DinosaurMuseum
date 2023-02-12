@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using GameFramework;
 
 namespace VGame
 {
@@ -26,6 +27,17 @@ namespace VGame
 				NavPoints[_BuildingArea] = Tem_transforms;
 			}
 			NavPoints[_BuildingArea].Add(_Transform);
+		}
+
+		public Transform GetNavPoint(BuildingArea _BuildingArea)
+		{
+			if (!NavPoints.ContainsKey(_BuildingArea))
+				return null;
+
+			int count = NavPoints[_BuildingArea].Count;
+			count = Utility.Random.GetRandom(count);
+
+			return NavPoints[_BuildingArea][count];
 		}
 	}
 }

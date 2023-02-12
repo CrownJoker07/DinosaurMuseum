@@ -7,16 +7,17 @@ namespace VGame
 {
 	public class Customer : MonoBehaviour
 	{
-		[SerializeField] private Animator m_Animator;
-
+		private Animator m_Animator;
 		private NavMeshAgent m_NavMeshAgent;
 		private Rigidbody m_Rigidbody;
 		private CustomerState m_CustomerState;
+		private Transform m_NavTarget;
 
 		private void Awake()
 		{
 			m_NavMeshAgent = GetComponent<NavMeshAgent>();
 			m_Rigidbody = GetComponent<Rigidbody>();
+			m_Animator = GetComponentInChildren<Animator>();
 		}
 
 		private void SwitchCustomerState(CustomerState _CustomerState)
@@ -42,7 +43,15 @@ namespace VGame
 
 		private void WalkEvent()
 		{
+			GetNavTarget();
 
+			if (m_NavMeshAgent.isOnNavMesh)
+				m_NavMeshAgent.SetDestination(m_NavTarget.position);
+		}
+
+		private void GetNavTarget()
+		{
+			m_NavTarget = VGameManager.Instance.GetNavPoint(BuildingArea.A);
 		}
 
 		private void InteractiveEvent()

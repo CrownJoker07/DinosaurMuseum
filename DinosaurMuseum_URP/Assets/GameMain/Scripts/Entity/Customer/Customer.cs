@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityGameFramework.Runtime;
 
 namespace VGame
 {
@@ -18,6 +19,16 @@ namespace VGame
 			m_NavMeshAgent = GetComponent<NavMeshAgent>();
 			m_Rigidbody = GetComponent<Rigidbody>();
 			m_Animator = GetComponentInChildren<Animator>();
+
+			SwitchCustomerState(CustomerState.Walk);
+		}
+
+		private void Update()
+		{
+			if (CheckArrive(m_NavTarget.position))
+			{
+				WalkEvent();
+			}
 		}
 
 		private void SwitchCustomerState(CustomerState _CustomerState)
@@ -51,6 +62,7 @@ namespace VGame
 
 		private void GetNavTarget()
 		{
+			Log.Error("123");
 			m_NavTarget = VGameManager.Instance.GetNavPoint(BuildingArea.A);
 		}
 
@@ -62,6 +74,13 @@ namespace VGame
 		private void VisitEvent()
 		{
 
+		}
+
+		private bool CheckArrive(Vector3 _TargetPosition)
+		{
+			Log.Error("{0},{1}", Vector3.SqrMagnitude(transform.position - _TargetPosition), Mathf.Pow(m_NavMeshAgent.stoppingDistance + 0.2f, 2));
+			return Vector3.SqrMagnitude(transform.position - _TargetPosition) <= Mathf.Pow(m_NavMeshAgent.stoppingDistance + 0.2f, 2)
+				&& m_NavMeshAgent.pathStatus == NavMeshPathStatus.PathComplete;
 		}
 	}
 }

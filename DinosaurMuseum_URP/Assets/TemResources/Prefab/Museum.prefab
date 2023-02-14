@@ -2501,6 +2501,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a327e431da1c390428455fc13af2d608, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a327e431da1c390428455fc13af2d608, type: 3}
 --- !u!4 &3572996045021083657 stripped
@@ -2524,8 +2528,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 89.62083, y: 0.00000003806781, z: 54.03959}
-  m_Center: {x: 0.11821747, y: 0.000981617, z: 0.0071439743}
+  m_Size: {x: 89.62083, y: 4, z: 54.03959}
+  m_Center: {x: 0.11821747, y: -2, z: 0.007144928}
 --- !u!1001 &6283275764350113565
 PrefabInstance:
   m_ObjectHideFlags: 0

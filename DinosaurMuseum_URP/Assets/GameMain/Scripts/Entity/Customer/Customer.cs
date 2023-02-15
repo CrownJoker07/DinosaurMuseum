@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityGameFramework.Runtime;
+using DG.Tweening;
 
 namespace VGame
 {
@@ -25,10 +26,34 @@ namespace VGame
 
 		private void Update()
 		{
+			if (m_CustomerState != CustomerState.Walk)
+				return;
+
 			if (CheckArrive(m_NavTarget.position))
 			{
-				WalkEvent();
+				SwitchCustomerState(CustomerState.Visit);
 			}
+		}
+
+		// 如果另一个碰撞器进入了触发器，则调用 OnTriggerEnter
+		private void OnTriggerEnter(Collider other)
+		{
+			if (other.gameObject.layer != Constant.Layer.PlayerLayerId)
+				return;
+
+			if (m_CustomerState != CustomerState.Walk)
+				return;
+
+			SwitchCustomerState(CustomerState.Interactive);
+		}
+
+		// 如果另一个碰撞器停止接触触发器，则调用 OnTriggerExit
+		private void OnTriggerExit(Collider other)
+		{
+			if (other.gameObject.layer != Constant.Layer.PlayerLayerId)
+				return;
+
+			KeepNaving();
 		}
 
 		private void SwitchCustomerState(CustomerState _CustomerState)
@@ -37,6 +62,7 @@ namespace VGame
 				return;
 
 			m_CustomerState = _CustomerState;
+			m_Animator.SetInteger("CustomerState", (int)m_CustomerState);
 
 			switch (m_CustomerState)
 			{
@@ -60,25 +86,39 @@ namespace VGame
 				m_NavMeshAgent.SetDestination(m_NavTarget.position);
 		}
 
+		private void KeepNaving()
+		{
+			m_Animator.SetInteger("CustomerState", (int)CustomerState.Walk);
+
+			m_NavMeshAgent.isStopped = false;
+		}
+
 		private void GetNavTarget()
 		{
-			Log.Error("123");
 			m_NavTarget = VGameManager.Instance.GetNavPoint(BuildingArea.A);
 		}
 
 		private void InteractiveEvent()
 		{
-
+			m_NavMeshAgent.velocity = Vector3.zero;
+			m_NavMeshAgent.isStopped = true;
 		}
 
 		private void VisitEvent()
 		{
+			m_NavMeshAgent.velocity = Vector3.zero;
 
+			transform.DORotate(m_NavTarget.eulerAngles, 0.5f).OnComplete(() =>
+			{
+				this.AttachTimer(10f, () =>
+				{
+					SwitchCustomerState(CustomerState.Walk);
+				});
+			});
 		}
 
 		private bool CheckArrive(Vector3 _TargetPosition)
 		{
-			Log.Error("{0},{1}", Vector3.SqrMagnitude(transform.position - _TargetPosition), Mathf.Pow(m_NavMeshAgent.stoppingDistance + 0.2f, 2));
 			return Vector3.SqrMagnitude(transform.position - _TargetPosition) <= Mathf.Pow(m_NavMeshAgent.stoppingDistance + 0.2f, 2)
 				&& m_NavMeshAgent.pathStatus == NavMeshPathStatus.PathComplete;
 		}

@@ -49,6 +49,12 @@ namespace VGame
 			if (m_CustomerState != CustomerState.Walk)
 				return;
 
+			Player _Player = other.GetComponent<Player>();
+			if (_Player.HasCustomerInteractive)
+				return;
+
+			_Player.HasCustomerInteractive = true;
+
 			transform.DOLookAt(other.transform.position, 0.5f);
 			SwitchCustomerState(CustomerState.Interactive);
 		}
@@ -62,7 +68,10 @@ namespace VGame
 			if (m_CustomerState != CustomerState.Interactive)
 				return;
 
-			KeepNaving();
+			Player _Player = other.GetComponent<Player>();
+			_Player.HasCustomerInteractive = false;
+
+			SwitchCustomerState(CustomerState.Walk);
 		}
 
 		private void SwitchCustomerState(CustomerState _CustomerState)
@@ -95,11 +104,6 @@ namespace VGame
 				m_NavMeshAgent.SetDestination(m_NavTarget.position);
 		}
 
-		private void KeepNaving()
-		{
-			SwitchCustomerState(CustomerState.Walk);
-		}
-
 		private void GetNavTarget()
 		{
 			m_NavTarget = VGameManager.Instance.GetNavPoint(BuildingArea.A);
@@ -107,13 +111,12 @@ namespace VGame
 
 		private void InteractiveEvent()
 		{
-			//m_NavMeshAgent.velocity = Vector3.zero;
 			m_NavMeshAgent.isStopped = true;
 		}
 
 		private void VisitEvent()
 		{
-			m_NavMeshAgent.velocity = Vector3.zero;
+			m_NavMeshAgent.isStopped = false;
 
 			transform.DORotate(m_NavTarget.eulerAngles, 0.5f).OnComplete(() =>
 			{

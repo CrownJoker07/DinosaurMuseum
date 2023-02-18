@@ -13,6 +13,7 @@ namespace VGame
 		{
 			m_Area = GetComponentInParent<Area>();
 			m_BuildingArea = m_Area.m_BuildingArea;
+			transform.SetPositionY(0);
 			VGameManager.Instance.AddNavPoint(m_BuildingArea, this.transform);
 		}
 	}

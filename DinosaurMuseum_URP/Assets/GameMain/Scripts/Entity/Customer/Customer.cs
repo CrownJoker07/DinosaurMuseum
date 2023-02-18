@@ -11,22 +11,27 @@ namespace VGame
 	{
 		private Animator m_Animator;
 		private NavMeshAgent m_NavMeshAgent;
-		private Rigidbody m_Rigidbody;
 		private CustomerState m_CustomerState;
 		private Transform m_NavTarget;
 
 		private void Awake()
 		{
 			m_NavMeshAgent = GetComponent<NavMeshAgent>();
-			m_Rigidbody = GetComponent<Rigidbody>();
 			m_Animator = GetComponentInChildren<Animator>();
+		}
 
+		private void Start()
+		{
+			GetNavTarget();
 			SwitchCustomerState(CustomerState.Walk);
 		}
 
 		private void Update()
 		{
 			if (m_CustomerState != CustomerState.Walk)
+				return;
+
+			if (Time.frameCount % 10 == 0)
 				return;
 
 			if (CheckArrive(m_NavTarget.position))
@@ -44,6 +49,7 @@ namespace VGame
 			if (m_CustomerState != CustomerState.Walk)
 				return;
 
+			transform.DOLookAt(other.transform.position, 0.5f);
 			SwitchCustomerState(CustomerState.Interactive);
 		}
 
@@ -51,6 +57,9 @@ namespace VGame
 		private void OnTriggerExit(Collider other)
 		{
 			if (other.gameObject.layer != Constant.Layer.PlayerLayerId)
+				return;
+
+			if (m_CustomerState != CustomerState.Interactive)
 				return;
 
 			KeepNaving();
@@ -80,7 +89,7 @@ namespace VGame
 
 		private void WalkEvent()
 		{
-			GetNavTarget();
+			m_NavMeshAgent.isStopped = false;
 
 			if (m_NavMeshAgent.isOnNavMesh)
 				m_NavMeshAgent.SetDestination(m_NavTarget.position);
@@ -88,9 +97,7 @@ namespace VGame
 
 		private void KeepNaving()
 		{
-			m_Animator.SetInteger("CustomerState", (int)CustomerState.Walk);
-
-			m_NavMeshAgent.isStopped = false;
+			SwitchCustomerState(CustomerState.Walk);
 		}
 
 		private void GetNavTarget()
@@ -100,7 +107,7 @@ namespace VGame
 
 		private void InteractiveEvent()
 		{
-			m_NavMeshAgent.velocity = Vector3.zero;
+			//m_NavMeshAgent.velocity = Vector3.zero;
 			m_NavMeshAgent.isStopped = true;
 		}
 
@@ -112,6 +119,7 @@ namespace VGame
 			{
 				this.AttachTimer(10f, () =>
 				{
+					GetNavTarget();
 					SwitchCustomerState(CustomerState.Walk);
 				});
 			});

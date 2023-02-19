@@ -141,6 +141,7 @@ namespace VGame
 		/// </summary>
 		[Header("自定义组件")]
 		[SerializeField] private PlayerCameraLockout m_PlayerCameraLockout;
+		[SerializeField] private Player m_Player;
 
 		private void Awake()
 		{
@@ -176,6 +177,7 @@ namespace VGame
 			_fallTimeoutDelta = FallTimeout;
 
 			m_PlayerCameraLockout.SetCameraFollowPlayer(isLocalPlayer);
+			m_Player.OnInit(isLocalPlayer);
 		}
 
 		private void Update()

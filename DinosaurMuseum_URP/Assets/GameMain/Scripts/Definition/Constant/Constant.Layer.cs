@@ -27,6 +27,9 @@ namespace VGame
 
 			public const string PlayerLayerName = "Player";
 			public static readonly int PlayerLayerId = LayerMask.NameToLayer(PlayerLayerName);
+
+			public const string OtherPlayerLayerName = "OtherPlayer";
+			public static readonly int OtherPlayerLayerId = LayerMask.NameToLayer(OtherPlayerLayerName);
 		}
 	}
 }

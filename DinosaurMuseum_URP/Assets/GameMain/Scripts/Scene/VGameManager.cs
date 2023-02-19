@@ -13,6 +13,8 @@ namespace VGame
 		public CinemachineVirtualCamera m_CinemachineVirtualCamera;
 		public NetworkManager m_NetworkManager;
 
+		public Player m_Player;
+
 		private void Awake()
 		{
 			if (Instance == null)

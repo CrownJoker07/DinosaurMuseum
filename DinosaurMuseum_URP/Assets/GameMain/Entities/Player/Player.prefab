@@ -2527,6 +2527,7 @@ MonoBehaviour:
   CameraAngleOverride: 0
   LockCameraPosition: 0
   m_PlayerCameraLockout: {fileID: 8763962331100518327}
+  m_Player: {fileID: 6669602000935945716}
 --- !u!114 &2494538334586056772
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,6 +13,8 @@ namespace VGame
 		private NavMeshAgent m_NavMeshAgent;
 		private CustomerState m_CustomerState;
 		private Transform m_NavTarget;
+		private Timer m_InteractiveTimer;
+		private Player m_Player;
 
 		private void Awake()
 		{
@@ -49,11 +51,10 @@ namespace VGame
 			if (m_CustomerState != CustomerState.Walk)
 				return;
 
-			Player _Player = other.GetComponent<Player>();
-			if (_Player.HasCustomerInteractive)
+			if (GetPlayer().HasCustomerInteractive)
 				return;
 
-			_Player.HasCustomerInteractive = true;
+			GetPlayer().HasCustomerInteractive = true;
 
 			transform.DOLookAt(other.transform.position, 0.5f);
 			SwitchCustomerState(CustomerState.Interactive);
@@ -68,8 +69,14 @@ namespace VGame
 			if (m_CustomerState != CustomerState.Interactive)
 				return;
 
-			Player _Player = other.GetComponent<Player>();
-			_Player.HasCustomerInteractive = false;
+			m_InteractiveTimer.Cancel();
+
+			PlayerExit();
+		}
+
+		private void PlayerExit()
+		{
+			GetPlayer().HasCustomerInteractive = false;
 
 			SwitchCustomerState(CustomerState.Walk);
 		}
@@ -112,11 +119,16 @@ namespace VGame
 		private void InteractiveEvent()
 		{
 			m_NavMeshAgent.isStopped = true;
+
+			m_InteractiveTimer = this.AttachTimer(10f, () =>
+			{
+				PlayerExit();
+			});
 		}
 
 		private void VisitEvent()
 		{
-			m_NavMeshAgent.isStopped = false;
+			m_NavMeshAgent.isStopped = true;
 
 			transform.DORotate(m_NavTarget.eulerAngles, 0.5f).OnComplete(() =>
 			{
@@ -130,8 +142,16 @@ namespace VGame
 
 		private bool CheckArrive(Vector3 _TargetPosition)
 		{
-			return Vector3.SqrMagnitude(transform.position - _TargetPosition) <= Mathf.Pow(m_NavMeshAgent.stoppingDistance + 0.2f, 2)
+			return Vector3.SqrMagnitude(transform.position - _TargetPosition) <= Mathf.Pow(m_NavMeshAgent.stoppingDistance + 0.3f, 2)
 				&& m_NavMeshAgent.pathStatus == NavMeshPathStatus.PathComplete;
+		}
+
+		private Player GetPlayer()
+		{
+			if (m_Player == null)
+				m_Player = VGameManager.Instance.m_Player;
+
+			return m_Player;
 		}
 	}
 }

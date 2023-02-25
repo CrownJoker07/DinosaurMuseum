@@ -203,7 +203,7 @@ namespace VGame
 
 		private void LateUpdate()
 		{
-			if (Cursor.lockState == CursorLockMode.Locked)
+			if (Cursor.lockState == CursorLockMode.Locked && !_input.CursorMode)
 				CameraRotation();
 		}
 

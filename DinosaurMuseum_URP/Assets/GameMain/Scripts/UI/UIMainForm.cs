@@ -5,6 +5,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
 namespace VGame
 {
@@ -28,6 +29,21 @@ namespace VGame
 		/// </summary>
 		public void OnClick_Back()
 		{
+			if (NetworkServer.active && NetworkClient.isConnected)
+			{
+				VGameManager.Instance.m_NetworkManager.StopHost();
+				VGameManager.Instance.m_NetworkManager.StopClient();
+			}
+			// stop client if client-only
+			else if (NetworkClient.isConnected)
+			{
+				VGameManager.Instance.m_NetworkManager.StopClient();
+			}
+			// stop server if server-only
+			else if (NetworkServer.active)
+			{
+				VGameManager.Instance.m_NetworkManager.StopServer();
+			}
 			m_ProcedureMain.GotoMenu();
 		}
 	}

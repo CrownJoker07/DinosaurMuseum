@@ -16,6 +16,7 @@ namespace VGame
 		private bool m_StartGame = false;
 		private bool m_JoinGame = false;
 		private StartMenuForm m_StartMenuForm = null;
+		private string networkAddress;
 
 		public override bool UseNativeDialog
 		{
@@ -30,9 +31,10 @@ namespace VGame
 			m_StartGame = true;
 		}
 
-		public void JoinGame()
+		public void JoinGame(string _networkAddress)
 		{
 			m_JoinGame = true;
+			networkAddress = _networkAddress;
 		}
 
 		protected override void OnEnter(ProcedureOwner procedureOwner)
@@ -67,6 +69,7 @@ namespace VGame
 			{
 				procedureOwner.SetData<VarInt32>("NextSceneId", GameEntry.Config.GetInt("Scene.VGame"));
 				procedureOwner.SetData<VarByte>("GameMode", m_StartGame ? (byte)GameMode.Server : (byte)GameMode.Client);
+				procedureOwner.SetData<VarString>("networkAddress", networkAddress);
 				ChangeState<ProcedureChangeScene>(procedureOwner);
 			}
 		}

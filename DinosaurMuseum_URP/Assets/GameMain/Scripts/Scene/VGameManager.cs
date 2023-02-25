@@ -13,12 +13,18 @@ namespace VGame
 		public CinemachineVirtualCamera m_CinemachineVirtualCamera;
 		public NetworkManager m_NetworkManager;
 
-		public Player m_Player;
+		[HideInInspector] public Player m_Player;
 
 		private void Awake()
 		{
 			if (Instance == null)
 				Instance = this;
+		}
+
+		private void OnDestroy()
+		{
+			Destroy(m_NetworkManager.gameObject);
+			Instance = null;
 		}
 
 		public void StartNetwork()
@@ -31,6 +37,11 @@ namespace VGame
 			{
 				m_NetworkManager.StartClient();
 			}
+		}
+
+		public void SetNetworkAddress(string _networkAddress)
+		{
+			m_NetworkManager.networkAddress = _networkAddress;
 		}
 	}
 }

@@ -18,6 +18,7 @@ namespace VGame
 		private GameBase m_CurrentGame = null;
 		private bool m_LeaveGame = false;
 		private UIMainForm m_UIMainForm = null;
+		private string networkAddress;
 
 		public override bool UseNativeDialog
 		{
@@ -48,12 +49,15 @@ namespace VGame
 
 			m_LeaveGame = false;
 			m_GameMode = (GameMode)procedureOwner.GetData<VarByte>("GameMode").Value;
+			networkAddress = procedureOwner.GetData<VarString>("networkAddress").Value;
+
 			if (m_CurrentGame != null)
 				m_CurrentGame.Initialize();
 
 			GameEntry.Event.Subscribe(OpenUIFormSuccessEventArgs.EventId, OnOpenUIFormSuccess);
 			GameEntry.UI.OpenUIForm(UIFormId.UIMainForm, this);
 
+			VGameManager.Instance.SetNetworkAddress(networkAddress);
 			VGameManager.Instance.StartNetwork();
 		}
 

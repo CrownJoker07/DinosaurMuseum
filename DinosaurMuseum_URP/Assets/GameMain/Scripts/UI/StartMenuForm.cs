@@ -7,12 +7,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 using Mirror;
+using UnityEngine.UI;
+using TMPro;
 
 namespace VGame
 {
 	public class StartMenuForm : UGuiForm
 	{
 		private ProcedureMenu m_ProcedureMenu = null;
+		[SerializeField] private TMP_InputField m_InputField = null;
+		private string networkAddress;
 
 		protected override void OnOpen(object userData)
 		{
@@ -30,6 +34,7 @@ namespace VGame
 		/// </summary>
 		public void OnClick_StartGame()
 		{
+
 			m_ProcedureMenu.StartGame();
 		}
 
@@ -38,7 +43,11 @@ namespace VGame
 		/// </summary>
 		public void OnClick_JoinGame()
 		{
-			m_ProcedureMenu.JoinGame();
+			if (m_InputField.text == "")
+				networkAddress = "localhost";
+			else
+				networkAddress = m_InputField.text;
+			m_ProcedureMenu.JoinGame(networkAddress);
 		}
 
 		/// <summary>

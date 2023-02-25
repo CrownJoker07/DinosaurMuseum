@@ -17,6 +17,7 @@ namespace VGame
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
+		public bool CursorMode = false;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -56,6 +57,11 @@ namespace VGame
 			SprintInput(value.isPressed);
 		}
 
+		public void OnCursorMode(InputValue value)
+		{
+			CursorModeInput(value.isPressed);
+		}
+
 #endif
 
 		public void MoveInput(Vector2 newMoveDirection)
@@ -90,13 +96,18 @@ namespace VGame
 			sprint = newSprintState;
 		}
 
+		public void CursorModeInput(bool _CursorMode)
+		{
+			if (!isLocalPlayer)
+				return;
+
+			CursorMode = _CursorMode;
+			SetCursorState(!CursorMode);
+		}
+
 		private void OnApplicationFocus(bool hasFocus)
 		{
-#if UNITY_EDITOR
 			SetCursorState(hasFocus);
-#else
-			SetCursorState(cursorLocked);
-#endif
 		}
 
 		private void SetCursorState(bool newState)

@@ -6,22 +6,58 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using TMPro;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading;
+using System;
+using System.Net.NetworkInformation;
 
 namespace VGame
 {
 	public class UIMainForm : UGuiForm
 	{
 		private ProcedureMain m_ProcedureMain = null;
+		[SerializeField] private TextMeshProUGUI roomIP;
 
 		protected override void OnOpen(object userData)
 		{
 			base.OnOpen(userData);
 			m_ProcedureMain = (ProcedureMain)userData;
+			roomIP.text = GetIP();
 		}
 
 		protected override void OnClose(bool isShutdown, object userData)
 		{
 			base.OnClose(isShutdown, userData);
+		}
+
+
+		/// <summary>
+		/// 获取本机IP
+		/// </summary>
+		/// <returns>string :ip地址</returns>
+		public string GetIP()
+		{
+			string output = "";
+
+			foreach (NetworkInterface item in NetworkInterface.GetAllNetworkInterfaces())
+			{
+				NetworkInterfaceType _type1 = NetworkInterfaceType.Wireless80211;  //无线局域网适配器 
+
+				if ((item.NetworkInterfaceType == _type1) && item.OperationalStatus == OperationalStatus.Up)
+				{
+					foreach (UnicastIPAddressInformation ip in item.GetIPProperties().UnicastAddresses)
+					{
+						if (ip.Address.AddressFamily == AddressFamily.InterNetwork)
+						{
+							output = ip.Address.ToString();
+						}
+					}
+				}
+			}
+			return output;
 		}
 
 		/// <summary>

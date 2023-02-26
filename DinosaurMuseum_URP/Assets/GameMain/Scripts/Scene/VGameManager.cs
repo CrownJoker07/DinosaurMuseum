@@ -11,6 +11,8 @@ namespace VGame
 		[HideInInspector] public static VGameManager Instance;
 
 		public CinemachineVirtualCamera m_CinemachineVirtualCamera;
+		public CinemachineVirtualCamera m_MiniMapVirtualCamera;
+		public Camera m_MiniMapCamera;
 		public NetworkManager m_NetworkManager;
 
 		[HideInInspector] public Player m_Player;
@@ -37,6 +39,12 @@ namespace VGame
 			{
 				m_NetworkManager.StartClient();
 			}
+		}
+
+		public void HideMiniMapComponent()
+		{
+			m_MiniMapCamera.gameObject.SetActive(false);
+			m_MiniMapVirtualCamera.gameObject.SetActive(false);
 		}
 
 		public void SetNetworkAddress(string _networkAddress)

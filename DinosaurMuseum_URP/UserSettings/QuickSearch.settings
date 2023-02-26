@@ -16,7 +16,7 @@ filters = {
 	settings = true
 }
 scopes = {
-	"last_search.AB59B443" = "starts"
+	"last_search.AB59B443" = "uima"
 }
 providers = {
 	asset = {

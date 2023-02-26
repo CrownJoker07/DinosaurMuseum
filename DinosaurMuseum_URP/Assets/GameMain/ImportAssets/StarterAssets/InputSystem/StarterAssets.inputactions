@@ -43,9 +43,9 @@
                 },
                 {
                     "name": "CursorMode",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "ca035c9d-ffea-492f-9b7d-860baec8ee24",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -230,11 +230,33 @@
                 },
                 {
                     "name": "",
-                    "id": "ad0b2a59-b691-4b7f-97a3-b4bb1d9e59c8",
-                    "path": "<Keyboard>/leftAlt",
+                    "id": "7be55926-a00b-4f52-9ba9-c961b9781e75",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
+                    "action": "Sprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "94c74119-3b57-4a1d-9171-871e5735bac5",
+                    "path": "<Keyboard>/alt",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "CursorMode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dc549f46-6596-47d0-b309-efaac8071358",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
                     "action": "CursorMode",
                     "isComposite": false,
                     "isPartOfComposite": false

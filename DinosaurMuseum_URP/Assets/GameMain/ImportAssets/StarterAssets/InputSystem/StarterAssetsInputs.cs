@@ -41,7 +41,7 @@ namespace VGame
 
 		public void OnLook(InputValue value)
 		{
-			if (cursorInputForLook)
+			if (cursorInputForLook && (Cursor.lockState == CursorLockMode.Locked) && !CursorMode)
 			{
 				LookInput(value.Get<Vector2>());
 			}

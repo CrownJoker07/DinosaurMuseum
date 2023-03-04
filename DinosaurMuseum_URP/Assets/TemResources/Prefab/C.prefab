@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3367405482298824142}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23,7 +23,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3049495972744547925}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 7008292820248814304}
   - component: {fileID: 3539529223286659956}
   - component: {fileID: 9007445748744605503}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: O_C_Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 4103948948686026118}
   - component: {fileID: 591069366507163512}
   - component: {fileID: 49748765067858274}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: O_C_Wall1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

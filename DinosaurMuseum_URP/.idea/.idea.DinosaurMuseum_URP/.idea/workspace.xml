@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="861e0363-5f78-4534-a572-0fe2bb5fb6a5" name="Changes" comment="">
+    <list default="true" id="861e0363-5f78-4534-a572-0fe2bb5fb6a5" name="Changes" comment="【需求】 添加时间通道效果">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DinosaurMuseum_URP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DinosaurMuseum_URP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TemResources/Mesh/Tunnel.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TemResources/Mesh/Tunnel.fbx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scenes/VGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scenes/VGame.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TemResources/Prefab/Museum.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TemResources/Prefab/Museum.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DinosaurMuseum_URP.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DinosaurMuseum_URP.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/QuickSearch.settings" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/QuickSearch.settings" afterDir="false" />
     </list>
@@ -22,6 +21,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ea6e1670984a4bdd96209705b0952fd726a00/c8/13df8d02/Animator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/TemResources/Prefab/Museum.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@10.10.0/Editor/Drawing/PreviewManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/UserSettings/EditorUserSettings.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../UnityEditor/2020.3.38f1c2/Editor/Data/CGIncludes/UnityCG.cginc" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -103,8 +103,16 @@
       <workItem from="1677917778656" duration="25000" />
       <workItem from="1677917814062" duration="60000" />
       <workItem from="1677917891964" duration="2655000" />
-      <workItem from="1678004226509" duration="1320000" />
+      <workItem from="1678004226509" duration="2033000" />
     </task>
+    <task id="LOCAL-00001" summary="【需求】 添加时间通道效果">
+      <created>1678010187175</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678010187175</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,5 +134,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="【需求】 添加时间通道效果" />
+    <option name="LAST_COMMIT_MESSAGE" value="【需求】 添加时间通道效果" />
   </component>
 </project>

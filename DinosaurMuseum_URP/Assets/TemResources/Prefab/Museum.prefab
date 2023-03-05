@@ -34,8 +34,7 @@ Transform:
   - {fileID: 5151578035857403712}
   - {fileID: 1757721250150423201}
   - {fileID: 3572996045021083657}
-  - {fileID: 5591343895028214211}
-  - {fileID: 5355379141416858541}
+  - {fileID: 6125085073580472356}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -66,11 +65,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4289823695409713597}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.273258, y: -0.05, z: 19.250063}
+  m_LocalPosition: {x: 14.273258, y: -0.09356165, z: 21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 746424500843701827}
-  m_RootOrder: 7
+  m_Father: {fileID: 6125085073580472356}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8575486006299372322
 MeshFilter:
@@ -146,7 +145,7 @@ GameObject:
   - component: {fileID: 1152211007395846866}
   - component: {fileID: 6213824204178419205}
   - component: {fileID: 5280198309079112573}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: O_Tunnel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,11 +160,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4364563526444372338}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.273251, y: 2.3, z: 19.250065}
+  m_LocalPosition: {x: 14.273251, y: 2.3, z: 21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 746424500843701827}
-  m_RootOrder: 8
+  m_Father: {fileID: 6125085073580472356}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1152211007395846866
 MeshFilter:
@@ -230,6 +229,38 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3927705780635899208, guid: 36c110793457afd438eec41df729cda8, type: 3}
+--- !u!1 &7629853539235810061
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6125085073580472356}
+  m_Layer: 8
+  m_Name: Tunnel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6125085073580472356
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7629853539235810061}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.002, y: 0.02, z: -2.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5591343895028214211}
+  - {fileID: 5355379141416858541}
+  m_Father: {fileID: 746424500843701827}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8294225449061148217
 GameObject:
   m_ObjectHideFlags: 0

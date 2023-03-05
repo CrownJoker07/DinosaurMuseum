@@ -1,16 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
 
 namespace VGame
 {
 	public class Player : MonoBehaviour
 	{
-		[HideInInspector] public bool HasCustomerInteractive = false;
+		[HideInInspector] public bool hasCustomerInteractive;
 
-		public void OnInit(bool _isLocalPlayer)
+		public void OnInit(bool isLocalPlayer)
 		{
-			if (_isLocalPlayer)
+			if (isLocalPlayer)
 			{
 				VGameManager.Instance.m_Player = this;
 			}

@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityGameFramework.Runtime;
 using DG.Tweening;
 
 namespace VGame
@@ -14,7 +11,7 @@ namespace VGame
 		private CustomerState m_CustomerState;
 		private Transform m_NavTarget;
 		private Timer m_InteractiveTimer;
-		private Player m_Player;
+		private readonly int m_State = Animator.StringToHash("CustomerState");
 
 		private void Awake()
 		{
@@ -51,10 +48,10 @@ namespace VGame
 			if (m_CustomerState != CustomerState.Walk)
 				return;
 
-			if (GetPlayer().HasCustomerInteractive)
+			if (GetPlayer().hasCustomerInteractive)
 				return;
 
-			GetPlayer().HasCustomerInteractive = true;
+			GetPlayer().hasCustomerInteractive = true;
 
 			transform.DOLookAt(other.transform.position, 0.5f);
 			SwitchCustomerState(CustomerState.Interactive);
@@ -76,18 +73,18 @@ namespace VGame
 
 		private void PlayerExit()
 		{
-			GetPlayer().HasCustomerInteractive = false;
+			GetPlayer().hasCustomerInteractive = false;
 
 			SwitchCustomerState(CustomerState.Walk);
 		}
 
-		private void SwitchCustomerState(CustomerState _CustomerState)
+		private void SwitchCustomerState(CustomerState customerState)
 		{
-			if (m_CustomerState == _CustomerState)
+			if (m_CustomerState == customerState)
 				return;
 
-			m_CustomerState = _CustomerState;
-			m_Animator.SetInteger("CustomerState", (int)m_CustomerState);
+			m_CustomerState = customerState;
+			m_Animator.SetInteger(m_State, (int)m_CustomerState);
 
 			switch (m_CustomerState)
 			{
@@ -120,10 +117,7 @@ namespace VGame
 		{
 			m_NavMeshAgent.isStopped = true;
 
-			m_InteractiveTimer = this.AttachTimer(10f, () =>
-			{
-				PlayerExit();
-			});
+			m_InteractiveTimer = this.AttachTimer(10f, PlayerExit);
 		}
 
 		private void VisitEvent()
@@ -140,18 +134,15 @@ namespace VGame
 			});
 		}
 
-		private bool CheckArrive(Vector3 _TargetPosition)
+		private bool CheckArrive(Vector3 targetPosition)
 		{
-			return Vector3.SqrMagnitude(transform.position - _TargetPosition) <= Mathf.Pow(m_NavMeshAgent.stoppingDistance + 0.3f, 2)
+			return Vector3.SqrMagnitude(transform.position - targetPosition) <= Mathf.Pow(m_NavMeshAgent.stoppingDistance + 0.3f, 2)
 				&& m_NavMeshAgent.pathStatus == NavMeshPathStatus.PathComplete;
 		}
 
 		private Player GetPlayer()
 		{
-			if (m_Player == null)
-				m_Player = VGameManager.Instance.m_Player;
-
-			return m_Player;
+			return VGameManager.Instance.m_Player;
 		}
 	}
 }

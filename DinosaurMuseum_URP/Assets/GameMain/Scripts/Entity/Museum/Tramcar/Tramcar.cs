@@ -17,8 +17,7 @@ namespace VGame
 			m_DefaultPosition = transform1.position;
 			m_DefaultEulerAngles = transform1.eulerAngles;
 			m_NavPoints = new List<Vector3>();
-
-			m_NavPoints.Add(m_DefaultPosition);
+			
 			foreach (var item in navPointTransforms)
 			{
 				m_NavPoints.Add(item.position);
@@ -28,8 +27,15 @@ namespace VGame
 		private void OnEnable()
 		{
 			transform.DOKill();
-			transform.DOLocalPath(m_NavPoints.ToArray(), 10f).SetLookAt(0, Vector3.forward).SetEase(Ease.Linear)
-				.SetLoops(-1, LoopType.Restart);
+			transform.DOPath(m_NavPoints.ToArray(), 10f).SetEase(Ease.Linear)
+				.SetLoops(-1, LoopType.Restart).OnWaypointChange(Turn);
+		}
+
+		private void Turn(int index)
+		{
+			if (index >= m_NavPoints.Count - 1) return;
+
+			transform.DOLookAt(m_NavPoints[index + 1], 0.5f, AxisConstraint.Y);
 		}
 
 		private void OnDisable()

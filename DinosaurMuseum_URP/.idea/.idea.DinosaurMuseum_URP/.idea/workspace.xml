@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="861e0363-5f78-4534-a572-0fe2bb5fb6a5" name="Changes" comment="【需求】 添加时间通道效果">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DinosaurMuseum_URP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DinosaurMuseum_URP/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Prefab/Museum/TramCar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Prefab/Museum/TramCar.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scenes/VGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scenes/VGame.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Entity/Museum/Tramcar/Tramcar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Entity/Museum/Tramcar/Tramcar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TemResources/Prefab/A.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TemResources/Prefab/A.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TemResources/Prefab/Museum.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TemResources/Prefab/Museum.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5ddb5fa70dfe40d2818192400111b9ec2aa00/35/de0fe1b3/TweenSettingsExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5ddb5fa70dfe40d2818192400111b9ec2aa00/45/a9410b60/ShortcutExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/68de4bf4581c4866baee3c103a5e701413ce00/03/b1e826a2/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/68de4bf4581c4866baee3c103a5e701413ce00/71/98897f16/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
@@ -104,7 +107,7 @@
       <workItem from="1677917814062" duration="60000" />
       <workItem from="1677917891964" duration="2655000" />
       <workItem from="1678004226509" duration="2033000" />
-      <workItem from="1678539399056" duration="4138000" />
+      <workItem from="1678539399056" duration="6458000" />
     </task>
     <task id="LOCAL-00001" summary="【需求】 添加时间通道效果">
       <created>1678010187175</created>

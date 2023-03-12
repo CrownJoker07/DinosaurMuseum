@@ -3,3 +3,4 @@
 |1|DialogForm|Default|TRUE|TRUE
 |100|UIMainForm|Default|FALSE|TRUE
 |101|StartMenuForm|Default|FALSE|TRUE
+|102|NewPlayerGuideUI|MessageBox|FALSE|FALSE

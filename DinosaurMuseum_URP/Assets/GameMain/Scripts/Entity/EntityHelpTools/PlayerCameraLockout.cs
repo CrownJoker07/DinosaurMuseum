@@ -8,8 +8,8 @@ namespace VGame
 {
 	public class PlayerCameraLockout : MonoBehaviour
 	{
-		private CinemachineVirtualCamera m_CinemachineVirtualCamera => VGameManager.Instance.m_CinemachineVirtualCamera;
-		private CinemachineVirtualCamera m_MiniMapVirtualCamera => VGameManager.Instance.m_MiniMapVirtualCamera;
+		private CinemachineVirtualCamera m_CinemachineVirtualCamera => VGameManager.instance.m_CinemachineVirtualCamera;
+		private CinemachineVirtualCamera m_MiniMapVirtualCamera => VGameManager.instance.m_MiniMapVirtualCamera;
 
 		public void SetCameraFollowPlayer(bool isLocalPlayer)
 		{
@@ -22,7 +22,7 @@ namespace VGame
 			}
 			else
 			{
-				VGameManager.Instance.HideMiniMapComponent();
+				VGameManager.instance.HideMiniMapComponent();
 			}
 		}
 	}

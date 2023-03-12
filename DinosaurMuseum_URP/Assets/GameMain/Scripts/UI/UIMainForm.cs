@@ -67,18 +67,18 @@ namespace VGame
 		{
 			if (NetworkServer.active && NetworkClient.isConnected)
 			{
-				VGameManager.Instance.m_NetworkManager.StopHost();
-				VGameManager.Instance.m_NetworkManager.StopClient();
+				VGameManager.instance.m_NetworkManager.StopHost();
+				VGameManager.instance.m_NetworkManager.StopClient();
 			}
 			// stop client if client-only
 			else if (NetworkClient.isConnected)
 			{
-				VGameManager.Instance.m_NetworkManager.StopClient();
+				VGameManager.instance.m_NetworkManager.StopClient();
 			}
 			// stop server if server-only
 			else if (NetworkServer.active)
 			{
-				VGameManager.Instance.m_NetworkManager.StopServer();
+				VGameManager.instance.m_NetworkManager.StopServer();
 			}
 			m_ProcedureMain.GotoMenu();
 		}

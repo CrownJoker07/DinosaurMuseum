@@ -1,3 +1,4 @@
+using System;
 using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ namespace VGame
 {
 	public partial class VGameManager : MonoBehaviour
 	{
-		[HideInInspector] public static VGameManager Instance;
+		[HideInInspector] public static VGameManager instance;
 
 		public CinemachineVirtualCamera m_CinemachineVirtualCamera;
 		public CinemachineVirtualCamera m_MiniMapVirtualCamera;
@@ -19,25 +20,30 @@ namespace VGame
 
 		private void Awake()
 		{
-			if (Instance == null)
-				Instance = this;
+			if (instance == null)
+				instance = this;
+
+			GameEntry.UI.OpenUIForm(UIFormId.NewPlayerGuideUI);
 		}
 
 		private void OnDestroy()
 		{
 			Destroy(m_NetworkManager.gameObject);
-			Instance = null;
+			instance = null;
 		}
 
 		public void StartNetwork()
 		{
-			if (ProcedureMain.m_GameMode == GameMode.Server)
+			switch (ProcedureMain.gameMode)
 			{
-				m_NetworkManager.StartHost();
-			}
-			else if (ProcedureMain.m_GameMode == GameMode.Client)
-			{
-				m_NetworkManager.StartClient();
+				case GameMode.Server:
+					m_NetworkManager.StartHost();
+					break;
+				case GameMode.Client:
+					m_NetworkManager.StartClient();
+					break;
+				default:
+					throw new ArgumentOutOfRangeException();
 			}
 		}
 
@@ -47,9 +53,9 @@ namespace VGame
 			m_MiniMapVirtualCamera.gameObject.SetActive(false);
 		}
 
-		public void SetNetworkAddress(string _networkAddress)
+		public void SetNetworkAddress(string networkAddress)
 		{
-			m_NetworkManager.networkAddress = _networkAddress;
+			m_NetworkManager.networkAddress = networkAddress;
 		}
 	}
 }

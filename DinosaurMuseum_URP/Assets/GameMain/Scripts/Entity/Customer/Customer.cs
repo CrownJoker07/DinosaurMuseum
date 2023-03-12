@@ -110,7 +110,7 @@ namespace VGame
 
 		private void GetNavTarget()
 		{
-			m_NavTarget = VGameManager.Instance.GetNavPoint(BuildingArea.A);
+			m_NavTarget = VGameManager.instance.GetNavPoint(BuildingArea.A);
 		}
 
 		private void InteractiveEvent()
@@ -142,7 +142,7 @@ namespace VGame
 
 		private Player GetPlayer()
 		{
-			return VGameManager.Instance.m_Player;
+			return VGameManager.instance.m_Player;
 		}
 	}
 }

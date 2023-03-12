@@ -1,31 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="861e0363-5f78-4534-a572-0fe2bb5fb6a5" name="Changes" comment="">
+    <list default="true" id="861e0363-5f78-4534-a572-0fe2bb5fb6a5" name="Changes" comment="【需求】 添加新手引导弹窗">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DinosaurMuseum_URP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DinosaurMuseum_URP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/UIForm.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/DataTables/UIForm.bytes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Fonts/JinLanYuanMoTI SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Fonts/JinLanYuanMoTI SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Fonts/NormalFont.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Materials/ScreenMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Materials/ScreenMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scenes/VGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scenes/VGame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DREntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DREntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRMusic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRMusic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRScene.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRSound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRSound.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRUIForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRUIForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRUISound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRUISound.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Entity/Building/NavPoint/NavPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Entity/Building/NavPoint/NavPoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Entity/Customer/Customer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Entity/Customer/Customer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Entity/EntityHelpTools/PlayerCameraLockout.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Entity/EntityHelpTools/PlayerCameraLockout.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Entity/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Entity/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedureMain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedureMain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/ImportAssets/StarterAssets/InputSystem/StarterAssetsInputs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/ImportAssets/StarterAssets/InputSystem/StarterAssetsInputs.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Scene/VGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Scene/VGameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UIFormId.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UIFormId.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UIMainForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UIMainForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StartScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TemResources/Prefab/Tunnel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TemResources/Prefab/Tunnel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DinosaurMuseum_URP.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DinosaurMuseum_URP.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/NewPlayerGuideUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/NewPlayerGuideUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UIForms/NewPlayerGuideUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UIForms/NewPlayerGuideUI.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +24,27 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ca3005014ab44423a8eae080265b967865800/99/8cb69f66/IUIManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ca3005014ab44423a8eae080265b967865800/eb/60ee751d/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ea6e1670984a4bdd96209705b0952fd726a00/c8/13df8d02/Animator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Fonts/JinLanYuanMoTI SDF.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scenes/VGame.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/DataTable/DREntity.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/DataTable/DRMusic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/DataTable/DRScene.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/DataTable/DRSound.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/DataTable/DRUIForm.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/DataTable/DRUISound.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/Entity/Building/NavPoint/NavPoint.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/Entity/Customer/Customer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/Entity/EntityHelpTools/PlayerCameraLockout.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameMain/Scripts/Entity/Museum/Tramcar/Tramcar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/Entity/Player/Player.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/Procedure/ProcedureMain.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/Scene/VGameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/UI/UIFormId.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/UI/UIMainForm.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/StartScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/TemResources/Prefab/Tunnel.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Plugins/PlayerInput/InputValue.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@10.10.0/Editor/Drawing/PreviewManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../UnityEditor/2020.3.38f1c2/Editor/Data/CGIncludes/UnityCG.cginc" root0="SKIP_HIGHLIGHTING" />
@@ -131,7 +132,7 @@
       <workItem from="1678004226509" duration="2033000" />
       <workItem from="1678539399056" duration="6498000" />
       <workItem from="1678598168428" duration="1708000" />
-      <workItem from="1678626435810" duration="2360000" />
+      <workItem from="1678626435810" duration="4367000" />
     </task>
     <task id="LOCAL-00001" summary="【需求】 添加时间通道效果">
       <created>1678010187175</created>
@@ -161,7 +162,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678600588253</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="【需求】 添加新手界面弹窗">
+      <created>1678629725847</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678629725847</updated>
+    </task>
+    <task id="LOCAL-00006" summary="【需求】 添加新手引导弹窗">
+      <created>1678629747803</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678629747803</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +202,8 @@
     <MESSAGE value="【需求】 调整博物馆预制体布局" />
     <MESSAGE value="【调整】 调整猎豹材质" />
     <MESSAGE value="【需求】 调整灯光" />
-    <option name="LAST_COMMIT_MESSAGE" value="【需求】 调整灯光" />
+    <MESSAGE value="【需求】 添加新手界面弹窗" />
+    <MESSAGE value="【需求】 添加新手引导弹窗" />
+    <option name="LAST_COMMIT_MESSAGE" value="【需求】 添加新手引导弹窗" />
   </component>
 </project>

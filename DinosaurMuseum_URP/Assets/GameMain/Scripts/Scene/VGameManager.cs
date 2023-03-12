@@ -15,6 +15,7 @@ namespace VGame
 		public CinemachineVirtualCamera m_MiniMapVirtualCamera;
 		public Camera m_MiniMapCamera;
 		public NetworkManager m_NetworkManager;
+		public StarterAssetsInputs starterAssetsInputs;
 
 		[HideInInspector] public Player m_Player;
 
@@ -22,8 +23,6 @@ namespace VGame
 		{
 			if (instance == null)
 				instance = this;
-
-			GameEntry.UI.OpenUIForm(UIFormId.NewPlayerGuideUI);
 		}
 
 		private void OnDestroy()

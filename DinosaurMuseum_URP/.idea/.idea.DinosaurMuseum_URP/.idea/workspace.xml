@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="861e0363-5f78-4534-a572-0fe2bb5fb6a5" name="Changes" comment="【需求】 添加新手引导弹窗">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DinosaurMuseum_URP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DinosaurMuseum_URP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/ImportAssets/StarterAssets/InputSystem/StarterAssetsInputs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/ImportAssets/StarterAssets/InputSystem/StarterAssetsInputs.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Scene/VGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Scene/VGameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/NewPlayerGuideUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/NewPlayerGuideUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UIForms/NewPlayerGuideUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UIForms/NewPlayerGuideUI.prefab" afterDir="false" />
-    </list>
+    <list default="true" id="861e0363-5f78-4534-a572-0fe2bb5fb6a5" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -132,7 +126,7 @@
       <workItem from="1678004226509" duration="2033000" />
       <workItem from="1678539399056" duration="6498000" />
       <workItem from="1678598168428" duration="1708000" />
-      <workItem from="1678626435810" duration="4367000" />
+      <workItem from="1678626435810" duration="4618000" />
     </task>
     <task id="LOCAL-00001" summary="【需求】 添加时间通道效果">
       <created>1678010187175</created>
@@ -176,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678629747803</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="【需求】 添加打开UI后玩家暂停逻辑">
+      <created>1678631904419</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678631904419</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,6 +205,7 @@
     <MESSAGE value="【需求】 调整灯光" />
     <MESSAGE value="【需求】 添加新手界面弹窗" />
     <MESSAGE value="【需求】 添加新手引导弹窗" />
-    <option name="LAST_COMMIT_MESSAGE" value="【需求】 添加新手引导弹窗" />
+    <MESSAGE value="【需求】 添加打开UI后玩家暂停逻辑" />
+    <option name="LAST_COMMIT_MESSAGE" value="【需求】 添加打开UI后玩家暂停逻辑" />
   </component>
 </project>

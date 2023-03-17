@@ -1,8 +1,9 @@
+using System;
 using UnityEngine;
 using Mirror;
+using UnityEngine.Serialization;
 
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
-
 using UnityEngine.InputSystem;
 
 #endif
@@ -11,61 +12,69 @@ namespace VGame
 {
 	public class StarterAssetsInputs : NetworkBehaviour
 	{
-		[Header("Character Input Values")]
-		public Vector2 move;
+		[Header("Character Input Values")] public Vector2 move;
 
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
-		public bool CursorMode = false;
+		public bool cursorMode;
+		public bool hasMessageBoxUI;
 
-		[Header("Movement Settings")]
-		public bool analogMovement;
+		[Header("Movement Settings")] public bool analogMovement;
 
-		[Header("Mouse Cursor Settings")]
-		public bool cursorLocked = true;
+		[Header("Mouse Cursor Settings")] public bool cursorLocked = true;
 
 		public bool cursorInputForLook = true;
+
+		private void Awake()
+		{
+			VGameManager.instance.starterAssetsInputs = this;
+		}
 
 		private void Start()
 		{
 			SetCursorState(true);
+			
+			GameEntry.UI.OpenUIForm(UIFormId.NewPlayerGuideUI);
 		}
 
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 
 		public void OnMove(InputValue value)
 		{
-			if ((Cursor.lockState == CursorLockMode.Locked) && !CursorMode)
+			if ((Cursor.lockState == CursorLockMode.Locked) && !cursorMode)
 				MoveInput(value.Get<Vector2>());
-			else
-				MoveInput(Vector2.zero);
+			// else
+			// 	MoveInput(Vector2.zero);
 		}
 
 		public void OnLook(InputValue value)
 		{
-			if (cursorInputForLook && (Cursor.lockState == CursorLockMode.Locked) && !CursorMode)
-			{
+			if (cursorInputForLook && (Cursor.lockState == CursorLockMode.Locked) && !cursorMode)
 				LookInput(value.Get<Vector2>());
-			}
-			else
-			{
-				LookInput(Vector2.zero);
-			}
+			
+			// else
+			// {
+			// 	LookInput(Vector2.zero);
+			// }
 		}
 
 		public void OnJump(InputValue value)
 		{
-			JumpInput(value.isPressed);
+			if ((Cursor.lockState == CursorLockMode.Locked) && !cursorMode)
+				JumpInput(value.isPressed);
 		}
 
 		public void OnSprint(InputValue value)
 		{
-			SprintInput(value.isPressed);
+			if ((Cursor.lockState == CursorLockMode.Locked) && !cursorMode)
+				SprintInput(value.isPressed);
 		}
 
 		public void OnCursorMode(InputValue value)
 		{
+			if (hasMessageBoxUI) return;
+			
 			CursorModeInput(value.isPressed);
 		}
 
@@ -103,17 +112,25 @@ namespace VGame
 			sprint = newSprintState;
 		}
 
-		public void CursorModeInput(bool _CursorMode)
+		private void CursorModeInput(bool mode)
 		{
 			if (!isLocalPlayer)
 				return;
 
-			CursorMode = _CursorMode;
-			SetCursorState(!CursorMode);
+			cursorMode = mode;
+			SetCursorState(!cursorMode);
+		}
+
+		public void UIInput(bool state)
+		{
+			hasMessageBoxUI = state;
+			CursorModeInput(state);
 		}
 
 		private void OnApplicationFocus(bool hasFocus)
 		{
+			if (hasMessageBoxUI) return;
+			
 			SetCursorState(hasFocus);
 		}
 
@@ -123,6 +140,11 @@ namespace VGame
 				return;
 
 			Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
+
+			if (Cursor.lockState != CursorLockMode.None) return;
+			
+			MoveInput(Vector2.zero);
+			LookInput(Vector2.zero);
 		}
 	}
 }

@@ -28,10 +28,7 @@ namespace VGame
 		/// 开始界面。
 		/// </summary>
 		StartMenuForm = 101,
-
-		/// <summary>
-		/// 关于。
-		/// </summary>
-		AboutForm = 102,
+		
+		NewPlayerGuideUI = 102,
 	}
 }

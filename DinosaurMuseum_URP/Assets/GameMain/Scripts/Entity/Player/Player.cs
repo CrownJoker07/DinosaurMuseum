@@ -11,7 +11,7 @@ namespace VGame
 		{
 			if (isLocalPlayer)
 			{
-				VGameManager.Instance.m_Player = this;
+				VGameManager.instance.m_Player = this;
 			}
 			else
 			{

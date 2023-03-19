@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="861e0363-5f78-4534-a572-0fe2bb5fb6a5" name="Changes" comment="" />
+    <list default="true" id="861e0363-5f78-4534-a572-0fe2bb5fb6a5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DinosaurMuseum_URP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DinosaurMuseum_URP/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/Settings/SampleSceneProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Configs/Settings/SampleSceneProfile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Prefab/Museum/TramCar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Prefab/Museum/TramCar.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scenes/VGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scenes/VGame.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scenes/VGameLightingSettings.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scenes/VGameLightingSettings.lighting" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StartScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TemResources/Prefab/A.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TemResources/Prefab/A.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TemResources/Prefab/Museum.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TemResources/Prefab/Museum.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DinosaurMuseum_URP.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DinosaurMuseum_URP.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,26 +29,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ca3005014ab44423a8eae080265b967865800/99/8cb69f66/IUIManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ca3005014ab44423a8eae080265b967865800/eb/60ee751d/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ea6e1670984a4bdd96209705b0952fd726a00/c8/13df8d02/Animator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Fonts/JinLanYuanMoTI SDF.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scenes/VGame.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/DataTable/DREntity.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/DataTable/DRMusic.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/DataTable/DRScene.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/DataTable/DRSound.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/DataTable/DRUIForm.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/DataTable/DRUISound.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/Entity/Building/NavPoint/NavPoint.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/Entity/Customer/Customer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/Entity/EntityHelpTools/PlayerCameraLockout.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameMain/Scripts/Entity/Museum/Tramcar/Tramcar.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/Entity/Player/Player.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/Procedure/ProcedureMain.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/Scene/VGameManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/UI/UIFormId.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/GameMain/Scripts/UI/UIMainForm.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/StartScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/TemResources/Prefab/Tunnel.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/GameDevelop/dinosaur-museum/DinosaurMuseum_URP/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.4/InputSystem/Plugins/PlayerInput/InputValue.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@10.10.0/Editor/Drawing/PreviewManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_Text.cs" root0="SKIP_HIGHLIGHTING" />
@@ -52,27 +44,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;
     ],
-    "rider.external.source.directories": [
-      "C:\\Users\\Zeweizhuang\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Zeweizhuang\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\Zeweizhuang\\AppData\\Local\\Symbols\\src"
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Zeweizhuang\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Zeweizhuang\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Zeweizhuang\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:\UnityEditor\2020.3.38f1c2\Editor\Unity.exe" />
@@ -100,10 +92,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="18448">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="18448" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />

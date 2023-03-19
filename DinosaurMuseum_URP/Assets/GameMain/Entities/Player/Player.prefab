@@ -2570,7 +2570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0637913997507b046a29fef07ff2abe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HasCustomerInteractive: 0
+  hasCustomerInteractive: 0
 --- !u!114 &7996419475022322093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2590,7 +2590,8 @@ MonoBehaviour:
   look: {x: 0, y: 0}
   jump: 0
   sprint: 0
-  CursorMode: 0
+  cursorMode: 0
+  hasMessageBoxUI: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
@@ -2635,7 +2636,7 @@ MonoBehaviour:
   GroundedRadius: 0.28
   GroundLayers:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1984
   CinemachineCameraTarget: {fileID: 871015596260301274}
   TopClamp: 70
   BottomClamp: -30

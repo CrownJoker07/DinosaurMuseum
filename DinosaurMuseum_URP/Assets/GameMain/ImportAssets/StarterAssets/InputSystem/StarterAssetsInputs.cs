@@ -59,11 +59,11 @@ namespace VGame
 			// }
 		}
 
-		public void OnJump(InputValue value)
-		{
-			if ((Cursor.lockState == CursorLockMode.Locked) && !cursorMode)
-				JumpInput(value.isPressed);
-		}
+		// public void OnJump(InputValue value)
+		// {
+		// 	if ((Cursor.lockState == CursorLockMode.Locked) && !cursorMode)
+		// 		JumpInput(value.isPressed);
+		// }
 
 		public void OnSprint(InputValue value)
 		{
@@ -100,7 +100,7 @@ namespace VGame
 		{
 			if (!isLocalPlayer)
 				return;
-
+		
 			jump = newJumpState;
 		}
 

@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="861e0363-5f78-4534-a572-0fe2bb5fb6a5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DinosaurMuseum_URP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DinosaurMuseum_URP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/Settings/SampleSceneProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Configs/Settings/SampleSceneProfile.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Prefab/Museum/TramCar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Prefab/Museum/TramCar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scenes/VGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scenes/VGame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scenes/VGameLightingSettings.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scenes/VGameLightingSettings.lighting" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StartScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StartScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TemResources/Prefab/A.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TemResources/Prefab/A.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TemResources/Prefab/Museum.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TemResources/Prefab/Museum.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DinosaurMuseum_URP.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DinosaurMuseum_URP.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="861e0363-5f78-4534-a572-0fe2bb5fb6a5" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -119,6 +108,7 @@
       <workItem from="1678539399056" duration="6498000" />
       <workItem from="1678598168428" duration="1708000" />
       <workItem from="1678626435810" duration="4618000" />
+      <workItem from="1679213557084" duration="652000" />
     </task>
     <task id="LOCAL-00001" summary="【需求】 添加时间通道效果">
       <created>1678010187175</created>

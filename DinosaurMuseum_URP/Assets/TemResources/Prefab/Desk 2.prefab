@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 6686804385851085899}
   - component: {fileID: 5894938681336768306}
   - component: {fileID: 2929061019444960651}
+  - component: {fileID: 5011005359484059143}
   m_Layer: 0
   m_Name: O_D_Desk2
   m_TagString: Untagged
@@ -194,3 +195,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5011005359484059143
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7315362152163074334}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.355747, y: 1.28, z: 0.97933227}
+  m_Center: {x: 0, y: 0, z: 0}

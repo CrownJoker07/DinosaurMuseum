@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2015678516266009896}
   m_Layer: 8
-  m_Name: O_E_Plant 1
+  m_Name: O_E_Plant1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

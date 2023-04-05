@@ -41,7 +41,8 @@ namespace VGame
 		public string GetIP()
 		{
 			string output = "";
-
+			
+#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
 			foreach (NetworkInterface item in NetworkInterface.GetAllNetworkInterfaces())
 			{
 				NetworkInterfaceType _type1 = NetworkInterfaceType.Wireless80211;  //无线局域网适配器 
@@ -57,6 +58,8 @@ namespace VGame
 					}
 				}
 			}
+#endif
+			
 			return output;
 		}
 

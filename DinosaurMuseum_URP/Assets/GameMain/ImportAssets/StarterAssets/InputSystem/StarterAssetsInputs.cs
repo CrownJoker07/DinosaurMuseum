@@ -33,9 +33,7 @@ namespace VGame
 
 		private void Start()
 		{
-			SetCursorState(true);
-			
-			GameEntry.UI.OpenUIForm(UIFormId.NewPlayerGuideUI);
+			SetCursorState(true);			
 		}
 
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED

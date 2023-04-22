@@ -12,6 +12,7 @@ namespace VGame
 			if (isLocalPlayer)
 			{
 				VGameManager.instance.m_Player = this;
+				GameEntry.UI.OpenUIForm(UIFormId.NewPlayerGuideUI);
 			}
 			else
 			{

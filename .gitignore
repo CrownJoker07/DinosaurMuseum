@@ -3,10 +3,12 @@
 /DinosaurMuseum_URP/Library
 /DinosaurMuseum_URP/Logs
 /DinosaurMuseum_URP/obj
+/AssetsBundle
 /DinosaurMuseum_URP/Assembly-CSharp.csproj
 /DinosaurMuseum_URP/Assembly-CSharp-Editor.csproj
 /DinosaurMuseum_URP/UnityGameFramework.Editor.csproj
 /DinosaurMuseum_URP/UnityGameFramework.Runtime.csproj
+/DinosaurMuseum_URP/Assets/StreamingAssets
 DinosaurMuseum_URP/Temp/
 *.csproj
 DinosaurMuseum_URP/UserSettings/QuickSearch.settings

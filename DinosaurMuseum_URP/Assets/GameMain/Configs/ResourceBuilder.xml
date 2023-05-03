@@ -2,14 +2,14 @@
 <UnityGameFramework>
   <ResourceBuilder>
     <Settings>
-      <InternalResourceVersion>6</InternalResourceVersion>
-      <Platforms>33</Platforms>
+      <InternalResourceVersion>23</InternalResourceVersion>
+      <Platforms>1</Platforms>
       <AssetBundleCompression>1</AssetBundleCompression>
       <CompressionHelperTypeName>UnityGameFramework.Runtime.DefaultCompressionHelper</CompressionHelperTypeName>
       <AdditionalCompressionSelected>True</AdditionalCompressionSelected>
-      <ForceRebuildAssetBundleSelected>False</ForceRebuildAssetBundleSelected>
-      <BuildEventHandlerTypeName>EasyARProject.Editor.GameBuildEventHandler</BuildEventHandlerTypeName>
-      <OutputDirectory>D:/GameDevelop/easy-arproject/EasyAR/AssetsBundle</OutputDirectory>
+      <ForceRebuildAssetBundleSelected>True</ForceRebuildAssetBundleSelected>
+      <BuildEventHandlerTypeName>VGame.Editor.GameBuildEventHandler</BuildEventHandlerTypeName>
+      <OutputDirectory>E:/A graduate design/Store/AssetsBundle</OutputDirectory>
       <OutputPackageSelected>True</OutputPackageSelected>
       <OutputFullSelected>False</OutputFullSelected>
       <OutputPackedSelected>False</OutputPackedSelected>

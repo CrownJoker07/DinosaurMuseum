@@ -9,7 +9,7 @@ namespace VGame
 {
 	public partial class VGameManager : MonoBehaviour
 	{
-		[HideInInspector] public static VGameManager instance;
+		public static VGameManager instance;
 
 		public CinemachineVirtualCamera m_CinemachineVirtualCamera;
 		public CinemachineVirtualCamera m_MiniMapVirtualCamera;
@@ -46,11 +46,11 @@ namespace VGame
 			}
 		}
 
-		public void HideMiniMapComponent()
-		{
-			m_MiniMapCamera.gameObject.SetActive(false);
-			m_MiniMapVirtualCamera.gameObject.SetActive(false);
-		}
+		// public void HideMiniMapComponent()
+		// {
+		// 	m_MiniMapCamera.gameObject.SetActive(false);
+		// 	m_MiniMapVirtualCamera.gameObject.SetActive(false);
+		// }
 
 		public void SetNetworkAddress(string networkAddress)
 		{

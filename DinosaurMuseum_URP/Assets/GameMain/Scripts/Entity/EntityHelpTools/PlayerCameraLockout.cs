@@ -20,10 +20,10 @@ namespace VGame
 				Vector3 temPosition = new Vector3(transform.position.x, m_MiniMapVirtualCamera.transform.position.y, transform.position.z);
 				m_MiniMapVirtualCamera.transform.position = temPosition;
 			}
-			else
-			{
-				VGameManager.instance.HideMiniMapComponent();
-			}
+			// else
+			// {
+			// 	VGameManager.instance.HideMiniMapComponent();
+			// }
 		}
 	}
 }
